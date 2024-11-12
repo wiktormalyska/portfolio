@@ -4,9 +4,15 @@
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 #root {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
