@@ -1,0 +1,14 @@
+services:
+  frontend:
+    container_name: portfolio-frontend
+    image: portfolio-frontend:latest
+    # ports:
+    #   - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - xcaddy
+
+networks:
+  xcaddy:
+    external: true
