@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="false"
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
-     inkscape:zoom="2.0792508"
-     inkscape:cx="148.85169"
-     inkscape:cy="121.91891"
+     inkscape:zoom="2.9405047"
+     inkscape:cx="128.20928"
+     inkscape:cy="128.37932"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="2552"
@@ -36,16 +36,28 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      showborder="true"
-     inkscape:clip-to-page="true" />
+     inkscape:clip-to-page="true"
+     showguides="true">
+    <sodipodi:guide
+       position="29.9036,76.160669"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.4717225,30.096401"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
   <defs
      id="defs1" />
   <g
      inkscape:label="Warstwa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-30.206963,-19.569879)">
+     transform="translate(-29.989113,-17.685572)">
     <circle
-       style="fill:#000000;stroke-width:0.374634"
+       style="fill:#ffffff;stroke-width:0.374634"
        id="path2"
        cx="40.652004"
        cy="58.993084"
@@ -60,7 +72,7 @@
        transform="matrix(0.5285856,-0.91553711,0.81919126,0.47296029,0,0)"><tspan
          sodipodi:role="line"
          id="tspan2"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.2837px;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';letter-spacing:0px;stroke-width:0.135448"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.2837px;font-family:Roboto;-inkscape-font-specification:'Roboto Bold';letter-spacing:0px;fill:#ffffff;stroke-width:0.135448"
          x="-27.744522"
          y="97.582428">WM</tspan></text>
   </g>

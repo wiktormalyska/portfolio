@@ -6,16 +6,16 @@ interface Color{
 
 const colorPalette: { [key: string]: Color } = {
     ["background"]: {
-        hex: "#352F44"
+        hex: "#000000"
     },
     ["highlight"]: {
-        hex: "#5C5470"
+        hex: "rgb(20,20,20)"
     },
     ["light"]: {
         hex: "#B9B4C7"
     },
     ["text"]: {
-        hex: "#FAF0E6"
+        hex: "#f0f0f0"
     }
 };
 
