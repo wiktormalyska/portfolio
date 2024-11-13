@@ -33,5 +33,5 @@ createRoot(document.getElementById('root')!).render(
 );
 
 const root = document.getElementById('root')!;
-root.style.backgroundColor = colorPalette.base.hex;
+root.style.backgroundColor = colorPalette.background.hex;
 root.style.color = colorPalette.text.hex;

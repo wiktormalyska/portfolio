@@ -19,7 +19,7 @@ const Navbar = () => (
             {elements.map((element, index) => {
                 const number = `${Math.floor(index / 10)}${index + 1}`;
                 return (
-                    <Link key={element.name} to={element.link}>
+                    <Link className={"navbarButton"} key={element.name} to={element.link}>
                         {`${number}. ${element.name}`}
                     </Link>
                 );
