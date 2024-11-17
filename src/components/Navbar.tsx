@@ -1,4 +1,4 @@
-import { LogoImage, NavbarElement, NavbarNavigation } from './Elements';
+import {LogoImage, NavbarElement, NavbarLeft, NavbarNavigation, PageName} from './Elements';
 import Logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +14,14 @@ const elements: NavbarLink[] = [
 
 const Navbar = () => (
     <NavbarElement>
-        <LogoImage src={Logo} />
+        <NavbarLeft>
+            <LogoImage src={Logo} />
+            <PageName>
+                Wiktor Małyska Portfolio
+            </PageName>
+        </NavbarLeft>
+
+
         <NavbarNavigation>
             {elements.map((element, index) => {
                 const number = `${Math.floor(index / 10)}${index + 1}`;

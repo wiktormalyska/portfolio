@@ -1,33 +1,13 @@
-// import {flavors} from "@catppuccin/palette";
-
-interface Color{
-    hex:string,
+interface Color {
+    hex: string;
 }
 
-const colorPalette: { [key: string]: Color } = {
-    ["background"]: {
-        hex: "#000000"
-    },
-    ["highlight"]: {
-        hex: "rgb(20,20,20)"
-    },
-    ["light"]: {
-        hex: "#B9B4C7"
-    },
-    ["text"]: {
-        hex: "#f0f0f0"
-    }
+const colorPalette: { [key in 'background' | 'footer' | 'header' | 'text' | 'primary']: Color } = {
+    background: { hex: "#1B1B1D" },
+    footer: { hex: "#1C1E21" },
+    header: { hex: "#242526" },
+    text: { hex: "#FFFCF6" },
+    primary: { hex: "#F5C242" }
 };
-
-// type Colors = typeof flavors.frappe.colors;
-// const colors: Colors = flavors.frappe.colors;
-//
-// for (const color in colors) {
-//     colorPalette[color] = {
-//         name: color,
-//         hex: colors[color as keyof Colors].hex
-//     };
-// }
-
 
 export default colorPalette;
