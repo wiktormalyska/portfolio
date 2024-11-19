@@ -16,7 +16,7 @@ const HomePage = () => {
                 <Tile title={"Wiktor Małyska"} header={<ProfileImage src={prof} alt="Profile"/>}>
                     <CodeBlockComponent code={AboutMeCode} language={"json"}/>
                 </Tile>
-            <Tile title={"Wiktor Małyska"}>
+            <Tile title={"bababababba"}>
 
             </Tile>
         </LeftPanel><RightPanel>
