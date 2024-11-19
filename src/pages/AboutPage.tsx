@@ -1,10 +1,11 @@
-import {Title} from "../components/Elements.tsx";
+import {BasePage} from "../components/BasePage.tsx";
 
 const AboutPage = () => {
     return (
-        <>
-            <Title>About</Title>
-        </>
+        <BasePage  title={"About"}>
+            <>
+            </>
+        </BasePage>
     )
 }
 export default AboutPage
