@@ -28,14 +28,26 @@ export const BasePage = ({children, title, description}:BasePageProps) => {
     }
 
     return (
-        <>
+        <PageBody>
             {header()}
             <Body>
                 {children}
             </Body>
-        </>
+        </PageBody>
     );
 }
+
+const PageBody = styled.div`
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+`
 
 const Title = styled.span`
     font-size: 3rem;
@@ -68,7 +80,9 @@ const Header = styled.div`
     align-content: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: calc(100% - 2rem);
     background-color: ${colorPalette.primary.hex};
     color: ${colorPalette.darkText.hex};
+    margin: 1rem;
+    border-radius: 1rem;
 `
