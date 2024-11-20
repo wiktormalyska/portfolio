@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import colorPalette from "../values/colorPalette.tsx";
+import colorPalette from "../../values/colorPalette.tsx";
 
 interface BasePageProps {
     children?: React.ReactNode;
     title?: string
     description?: string
+    maximum_width?: string
 }
 
-export const BasePage = ({children, title, description}:BasePageProps) => {
+export const BasePage = ({children, title, description, maximum_width}:BasePageProps) => {
     const header = () => {
         if (!title) {
             return (<></>)
@@ -30,7 +31,7 @@ export const BasePage = ({children, title, description}:BasePageProps) => {
     return (
         <PageBody>
             {header()}
-            <Body>
+            <Body maximumwidth={maximum_width}>
                 {children}
             </Body>
         </PageBody>
@@ -56,15 +57,29 @@ const Title = styled.span`
     text-align: center;
     font-weight: bold;
 `
+interface BodyProps {
+    maximumwidth?: string
+}
 
-const Body = styled.div`
+const Body = styled.div<BodyProps>`
     font-size: 1rem;
     width: 100%;
     padding: 1rem;
-    height: 100%;
+    height: 1000px;
     color: ${colorPalette.text.hex};
     display: flex;
     gap: 1rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    
+    @media (max-width: ${(props) => props.maximumwidth}) {
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+    }
 `
 const Description = styled.span`
     font-size: 1.5rem;

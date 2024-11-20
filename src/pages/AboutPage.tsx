@@ -1,4 +1,4 @@
-import {BasePage} from "../components/BasePage.tsx";
+import {BasePage} from "../components/elements/BasePage.tsx";
 
 const AboutPage = () => {
     return (

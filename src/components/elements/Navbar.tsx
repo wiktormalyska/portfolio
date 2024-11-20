@@ -1,7 +1,7 @@
-import Logo from '../assets/logo.png';
+import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
-import colorPalette from "../values/colorPalette.tsx";
+import colorPalette from "../../values/colorPalette.tsx";
 
 interface NavbarLink {
     name: string;
@@ -13,11 +13,17 @@ const elements: NavbarLink[] = [
     { name: 'About', link: '/about' },
 ];
 
-const Navbar = () => (
+interface NavbarProps {
+    maximum_width?: string
+    children?: React.ReactNode
+}
+
+const Navbar = ({maximum_width}:NavbarProps) => {
+    return (
     <NavbarElement>
         <NavbarLeft>
-            <LogoImage src={Logo} />
-            <PageName>
+            <LogoImage src={Logo}/>
+            <PageName maximum_width={maximum_width}>
                 Wiktor Małyska Portfolio
             </PageName>
         </NavbarLeft>
@@ -34,7 +40,8 @@ const Navbar = () => (
             })}
         </NavbarNavigation>
     </NavbarElement>
-);
+    )
+}
 
 export default Navbar;
 
@@ -51,6 +58,9 @@ export const NavbarElement = styled.div`
     padding: 8px 16px 8px 16px;
     height: 60px;
     position: sticky;
+    
+
+    
 `
 
 export const LogoImage = styled.img`
@@ -71,9 +81,16 @@ export const NavbarLeft = styled.div`
     height: 100%;
 `
 
-export const PageName = styled.span`
+interface PageNameProps{
+    maximum_width?: string
+}
+
+export const PageName = styled.span<PageNameProps>`
     font-size: 100%;
     font-weight: bold;
-    color: ${colorPalette.text.hex}
+    color: ${colorPalette.text.hex};
     
+    @media (max-width: ${(props) => props.maximum_width || "0px"}) {
+        display: none;
+    }
 `

@@ -5,12 +5,12 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import colorPalette from './values/colorPalette';
-import Navbar from './components/Navbar';
+import Navbar from './components/elements/Navbar.tsx';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
-// eslint-disable-next-line react-refresh/only-export-components
-const Layout  = () => (
+export const Layout  = () => (
     <>
-        <Navbar />
+        <Navbar maximum_width={"450px"} />
         <Outlet />
     </>
 );
@@ -33,5 +33,6 @@ createRoot(document.getElementById('root')!).render(
 );
 
 const root = document.getElementById('root')!;
-root.style.backgroundColor = colorPalette.background.hex;
+const body = document.getElementsByTagName('body')[0]
+body.style.backgroundColor = colorPalette.background.hex;
 root.style.color = colorPalette.text.hex;

@@ -1,52 +1,63 @@
-import {BasePage} from "../components/BasePage.tsx";
+import {BasePage} from "../components/elements/BasePage.tsx";
 import styled from "styled-components";
 import {Tile} from "../components/tiles/Tile.tsx";
-import prof from "../assets/prof.jpg"
-import {CodeBlockComponent} from "../components/CodeBlockComponent.tsx";
+import {ProfileTile} from "../components/tiles/ProfileTile.tsx";
+import {AboutMeTile} from "../components/tiles/AboutMeTile.tsx";
+import {ProfileLinksTile} from "../components/tiles/ProfileLinksTile.tsx";
 
-const AboutMeCode =
-    "{\n " +
-    "\"title\": \"fullstack developer\"" +
-    "\n}"
+const maximum_width = "1500px"
 
 const HomePage = () => {
     return (
-        <BasePage>
-            <LeftPanel>
-                <Tile title={"Wiktor Małyska"} header={<ProfileImage src={prof} alt="Profile"/>}>
-                    <CodeBlockComponent code={AboutMeCode} language={"json"}/>
+        <BasePage maximum_width={maximum_width}>
+            <LeftPanel maximumwidth={maximum_width}>
+                {ProfileTile(maximum_width)}
+                {AboutMeTile()}
+                {ProfileLinksTile()}
+            </LeftPanel>
+            <RightPanel maximumwidth={maximum_width}>
+                <Tile title="Wiktor Małyska">
+
                 </Tile>
-            <Tile title={"bababababba"}>
-
-            </Tile>
-        </LeftPanel><RightPanel>
-            <Tile title={"Wiktor Małyska"}>
-
-            </Tile>
-        </RightPanel>
+            </RightPanel>
         </BasePage>
     )
 }
 export default HomePage
 
-const LeftPanel = styled.div`
+
+
+interface PanelProps {
+    maximumwidth?: string
+}
+
+const LeftPanel = styled.div<PanelProps>`
     display: flex;
     height: 100%;
-    width: 25%;
+    width: 256px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    
+    @media (max-width: ${(props) => props.maximumwidth}) {
+        width: 100%;
+        height: auto;
+    }
 `
 
-const RightPanel = styled.div`
+const RightPanel = styled.div<PanelProps>`
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 600px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: ${(props) => props.maximumwidth}) {
+        width: 100%;
+        height: auto;
+    }
 `
 
-const ProfileImage = styled.img`
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-`
+
