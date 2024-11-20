@@ -49,7 +49,7 @@ const LeftPanel = styled.div<PanelProps>`
 const RightPanel = styled.div<PanelProps>`
     display: flex;
     height: 100%;
-    width: 600px;
+    width: 1500px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
