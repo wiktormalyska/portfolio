@@ -5,11 +5,14 @@ import {ProfileTile} from "../components/tiles/ProfileTile.tsx";
 import {AboutMeTile} from "../components/tiles/AboutMeTile.tsx";
 import {ProfileLinksTile} from "../components/tiles/ProfileLinksTile.tsx";
 
-const maximum_width = "1500px"
+
+//Mobile view turn on when:
+const maximum_width = "800px"
+const maximum_height = "1050px"
 
 const HomePage = () => {
     return (
-        <BasePage maximum_width={maximum_width}>
+        <BasePage maximum_width={maximum_width} maximum_height={maximum_height}>
             <LeftPanel maximumwidth={maximum_width}>
                 {ProfileTile(maximum_width)}
                 {AboutMeTile()}

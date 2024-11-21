@@ -6,9 +6,10 @@ interface BasePageProps {
     title?: string
     description?: string
     maximum_width?: string
+    maximum_height?: string
 }
 
-export const BasePage = ({children, title, description, maximum_width}:BasePageProps) => {
+export const BasePage = ({children, title, description, maximum_width, maximum_height}:BasePageProps) => {
     const header = () => {
         if (!title) {
             return (<></>)
@@ -29,7 +30,7 @@ export const BasePage = ({children, title, description, maximum_width}:BasePageP
     }
 
     return (
-        <PageBody>
+        <PageBody maximum_width={maximum_width} maximum_height={maximum_height}>
             {header()}
             <Body maximumwidth={maximum_width}>
                 {children}
@@ -37,8 +38,13 @@ export const BasePage = ({children, title, description, maximum_width}:BasePageP
         </PageBody>
     );
 }
+interface PageBodyProps {
+    maximum_width?: string
+    maximum_height?: string
+}
 
-const PageBody = styled.div`
+
+const PageBody = styled.div<PageBodyProps>`
     width: 100%;
     display: flex;
     height: 100%;
@@ -47,6 +53,14 @@ const PageBody = styled.div`
     align-content: center;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${(props) => props.maximum_width}) {
+        justify-content: flex-start;
+    }
+
+    @media (max-height: ${(props) => props.maximum_height}) {
+        justify-content: flex-start;
+    }
     
 `
 
@@ -79,6 +93,7 @@ const Body = styled.div<BodyProps>`
         flex-direction: column;
         width: 300px;
         height: auto;
+
     }
 `
 const Description = styled.span`
