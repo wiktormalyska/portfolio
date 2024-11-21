@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+        skipDefaultCheckout()
+    }
 
     environment {
         FRONTEND_IMAGE = 'portfolio-frontend:latest'
