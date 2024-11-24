@@ -8,21 +8,30 @@ import {ProfileLinksTile} from "../components/tiles/ProfileLinksTile.tsx";
 
 //Mobile view turn on when:
 const maximum_width = "800px"
-const maximum_height = "1050px"
+const maximum_height = "850px"
 
 const HomePage = () => {
     return (
-        <BasePage maximum_width={maximum_width} maximum_height={maximum_height}>
-            <LeftPanel maximumwidth={maximum_width}>
+        <BasePage maximum_width={maximum_width} maximum_height={maximum_height} side_spacing="0 5rem">
+            <ColumnPanel maximumwidth={maximum_width} width="256px">
                 {ProfileTile(maximum_width)}
                 {AboutMeTile()}
-                {ProfileLinksTile()}
-            </LeftPanel>
-            <RightPanel maximumwidth={maximum_width}>
-                <Tile title="Wiktor Małyska">
+            </ColumnPanel>
+            <ColumnPanel maximumwidth={maximum_width}>
+                <Tile title="Projects">
 
                 </Tile>
-            </RightPanel>
+
+            </ColumnPanel>
+            <ColumnPanel maximumwidth={maximum_width} width="512px">
+                <Tile title="Tools i use">
+                    {}
+                </Tile>
+                <Tile title="Social Links">
+                    {ProfileLinksTile()}
+                </Tile>
+
+            </ColumnPanel>
         </BasePage>
     )
 }
@@ -32,12 +41,13 @@ export default HomePage
 
 interface PanelProps {
     maximumwidth?: string
+    width? : string
 }
 
-const LeftPanel = styled.div<PanelProps>`
+const ColumnPanel = styled.div<PanelProps>`
     display: flex;
     height: 100%;
-    width: 256px;
+    width: ${(props) => props.width || "100%"};
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -48,19 +58,19 @@ const LeftPanel = styled.div<PanelProps>`
         height: auto;
     }
 `
-
-const RightPanel = styled.div<PanelProps>`
-    display: flex;
-    height: 100%;
-    width: 1500px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media (max-width: ${(props) => props.maximumwidth}) {
-        width: 100%;
-        height: auto;
-    }
-`
+//
+// const RightPanel = styled.div<PanelProps>`
+//     display: flex;
+//     height: 100%;
+//     width: 1500px;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//
+//     @media (max-width: ${(props) => props.maximumwidth}) {
+//         width: 100%;
+//         height: auto;
+//     }
+//`
 
 

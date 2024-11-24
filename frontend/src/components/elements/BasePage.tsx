@@ -7,9 +7,10 @@ interface BasePageProps {
     description?: string
     maximum_width?: string
     maximum_height?: string
+    side_spacing?: string
 }
 
-export const BasePage = ({children, title, description, maximum_width, maximum_height}:BasePageProps) => {
+export const BasePage = ({children, title, description, maximum_width, maximum_height, side_spacing}:BasePageProps) => {
     const header = () => {
         if (!title) {
             return (<></>)
@@ -30,7 +31,7 @@ export const BasePage = ({children, title, description, maximum_width, maximum_h
     }
 
     return (
-        <PageBody maximum_width={maximum_width} maximum_height={maximum_height}>
+        <PageBody maximum_width={maximum_width} maximum_height={maximum_height} side_spacing={side_spacing} >
             {header()}
             <Body maximumwidth={maximum_width}>
                 {children}
@@ -41,6 +42,7 @@ export const BasePage = ({children, title, description, maximum_width, maximum_h
 interface PageBodyProps {
     maximum_width?: string
     maximum_height?: string
+    side_spacing?: string
 }
 
 
@@ -53,6 +55,7 @@ const PageBody = styled.div<PageBodyProps>`
     align-content: center;
     justify-content: center;
     align-items: center;
+    padding: ${(props) => props.side_spacing || "0"};
 
     @media (max-width: ${(props) => props.maximum_width}) {
         justify-content: flex-start;
@@ -79,7 +82,6 @@ const Body = styled.div<BodyProps>`
     font-size: 1rem;
     width: 100%;
     padding: 1rem;
-    height: 1000px;
     color: ${colorPalette.text.hex};
     display: flex;
     gap: 1rem;

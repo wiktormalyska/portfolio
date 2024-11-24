@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="moved frontend to subfolder" />
+    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="moved frontend to subfolder">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/BasePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/elements/BasePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +63,7 @@
     "npm.dev.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,7 +104,8 @@
       <workItem from="1732034808361" duration="4488000" />
       <workItem from="1732117213608" duration="17125000" />
       <workItem from="1732208131571" duration="598000" />
-      <workItem from="1732475544910" duration="1881000" />
+      <workItem from="1732475544910" duration="1938000" />
+      <workItem from="1732483434176" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <option name="closed" value="true" />
@@ -278,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732476705902</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="moved frontend to subfolder">
+      <option name="closed" value="true" />
+      <created>1732478141092</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732478141092</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

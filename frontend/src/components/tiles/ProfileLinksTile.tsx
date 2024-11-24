@@ -9,7 +9,7 @@ export const ProfileLinksTile = () => {
                 {IconLinkToProfile("bi-github", "https://github.com/wiktormalyska", "GitHub")}
                 {IconLinkToProfile("bi-linkedin", "https://linkedin.com/in/wiktor-malyska", "LinkedIn")}
                 {IconLinkToProfile("bi-book-half", "https://docusaurus.wiktormalyska.ovh/", "Project Docs")}
-                {IconLinkToProfile("bi-file-earmark-fill", "https://rxresu.me/wiktormalyska/java-eng", "Resume")}
+                {IconLinkToProfile("bi-file-earmark-fill", "https://wiktormalyska.ovh/Wiktor_Malyska_ENG.pdf", "Resume")}
 
             </Links>
         </Tile>
