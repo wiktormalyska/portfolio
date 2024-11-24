@@ -18,7 +18,9 @@ pipeline {
         }
         stage('Build frontend') {
             steps {
-                sh 'docker build -t $FRONTEND_IMAGE .'
+                dir ('frontend') {
+                    sh 'docker build -t $FRONTEND_IMAGE .'
+                }
             }
         }
         //Deploy
