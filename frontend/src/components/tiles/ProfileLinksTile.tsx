@@ -10,7 +10,6 @@ export const ProfileLinksTile = () => {
                 {IconLinkToProfile("bi-linkedin", "https://linkedin.com/in/wiktor-malyska", "LinkedIn")}
                 {IconLinkToProfile("bi-book-half", "https://docusaurus.wiktormalyska.ovh/", "Project Docs")}
                 {IconLinkToProfile("bi-file-earmark-fill", "https://wiktormalyska.ovh/Wiktor_Malyska_ENG.pdf", "Resume")}
-
             </Links>
         </Tile>
     )
