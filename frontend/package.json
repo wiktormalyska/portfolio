@@ -11,13 +11,15 @@
   },
   "dependencies": {
     "@catppuccin/palette": "^1.7.1",
+    "@tailwindcss/vite": "^4.0.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "react": "^18.3.1",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
