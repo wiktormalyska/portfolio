@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="rearranged and fixed scaling of tiles">
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/app.css" afterDir="false" />
+    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="Rework Init">
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/navigation/NavigationLinks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/code.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/prof.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/BasePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/CodeBlockComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/IconLinkToProfile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/Navbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/elements/codeBlockCss.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/tiles/AboutMeTile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/tiles/ProfileLinksTile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/tiles/ProfileTile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/tiles/Tile.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/aboutMeCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/AboutPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/tools/AboutMeCode.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/values/colorPalette.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -81,7 +70,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;rework&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/wikim/WebstormProjects/portfolio/public&quot;,
@@ -105,11 +94,11 @@
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\navigation" />
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\public" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\app" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend" />
-      <recent name="C:\Users\wikim\WebstormProjects\portfolio\src\components\elements" />
-      <recent name="C:\Users\wikim\WebstormProjects\portfolio\public" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -153,7 +142,9 @@
       <workItem from="1733176108414" duration="1197000" />
       <workItem from="1733706611084" duration="5000" />
       <workItem from="1738098987320" duration="1984000" />
-      <workItem from="1738103299733" duration="298000" />
+      <workItem from="1738103299733" duration="358000" />
+      <workItem from="1738107336453" duration="2945000" />
+      <workItem from="1738245471903" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <option name="closed" value="true" />
@@ -355,7 +346,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732658669978</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Rework Init">
+      <option name="closed" value="true" />
+      <created>1738103658419</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1738103658419</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,6 +383,7 @@
     <MESSAGE value="Fixed responsiveness" />
     <MESSAGE value="moved frontend to subfolder" />
     <MESSAGE value="rearranged and fixed scaling of tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="rearranged and fixed scaling of tiles" />
+    <MESSAGE value="Rework Init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rework Init" />
   </component>
 </project>
