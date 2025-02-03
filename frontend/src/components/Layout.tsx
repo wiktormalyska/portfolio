@@ -26,7 +26,6 @@ export function Layout ({children}:LayoutProps) {
     return (
         <div className={"w-full h-max flex flex-col text-text pb-20"}>
             <Navigation />
-
             {children}
         </div>
     )

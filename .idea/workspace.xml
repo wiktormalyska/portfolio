@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="add Animated Background">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AppBackground.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/prof.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ActivityContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/CommandLineIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/WebsiteIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_ENG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_ENG.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_PL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_PL.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppBackground.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AppBackground.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/navigation/NavigationLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/navigation/NavigationLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,40 +70,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rework&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/wikim/WebstormProjects/portfolio/public&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.codinjutsu.tools.jenkins.servers&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Batch.run.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "rework",
+    "ignore.virus.scanning.warn.message": "true",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "C:/Users/wikim/WebstormProjects/portfolio/public",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.codinjutsu.tools.jenkins.servers",
+    "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\public" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\navigation" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\public" />
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\navigation" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\app" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="run" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="portfolio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\wikim\WebstormProjects\portfolio\frontend\public" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="run.bat" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Batch.run" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -149,7 +168,9 @@
       <workItem from="1738245471903" duration="3719000" />
       <workItem from="1738529429430" duration="4345000" />
       <workItem from="1738540319938" duration="563000" />
-      <workItem from="1738545974449" duration="4481000" />
+      <workItem from="1738545974449" duration="4494000" />
+      <workItem from="1738592448166" duration="289000" />
+      <workItem from="1738597036536" duration="8458000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <option name="closed" value="true" />
@@ -391,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738540894812</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add Animated Background">
+      <option name="closed" value="true" />
+      <created>1738555267236</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1738555267236</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
