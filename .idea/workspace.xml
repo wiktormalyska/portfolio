@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="add Navbar, logo and create navigation">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" afterDir="false" />
+    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="added AppWrapper.tsx with blurred circles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +139,8 @@
       <workItem from="1738103299733" duration="358000" />
       <workItem from="1738107336453" duration="2945000" />
       <workItem from="1738245471903" duration="3719000" />
-      <workItem from="1738529429430" duration="4308000" />
+      <workItem from="1738529429430" duration="4345000" />
+      <workItem from="1738540319938" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <option name="closed" value="true" />
@@ -362,7 +358,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738249440736</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added AppWrapper.tsx with blurred circles">
+      <option name="closed" value="true" />
+      <created>1738539211678</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1738539211678</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added AppWrapper.tsx with blurred circles">
+      <option name="closed" value="true" />
+      <created>1738539233614</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1738539233614</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +405,7 @@
     <MESSAGE value="rearranged and fixed scaling of tiles" />
     <MESSAGE value="Rework Init" />
     <MESSAGE value="add Navbar, logo and create navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Navbar, logo and create navigation" />
+    <MESSAGE value="added AppWrapper.tsx with blurred circles" />
+    <option name="LAST_COMMIT_MESSAGE" value="added AppWrapper.tsx with blurred circles" />
   </component>
 </project>
