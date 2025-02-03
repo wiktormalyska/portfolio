@@ -7,9 +7,9 @@ export function Navigation() {
             <div className="flex flex-row w-full justify-between h-full p-2">
                 <div className="flex flex-row items-center gap-5">
                     <img src={logo} alt="Logo" className="h-10"/>
-                    <div className="font-extrabold stroke-1 stroke-neutral-100 ">Wiktor Małyska</div>
+                    <div className="nav-text">Wiktor Małyska</div>
                 </div>
-                <div className="flex flex-row items-center gap-5">
+                <div className="flex flex-row items-center gap-5 text-text tracking-widest">
                     <NavigationLinks/>
                 </div>
             </div>
