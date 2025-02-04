@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="add Animated Background">
-      <change afterPath="$PROJECT_DIR$/frontend/public/prof.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ActivityContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/CommandLineIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/WebsiteIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
+    <list default="true" id="0055ae36-2e7b-4ce6-8bd9-a7b93c9aeb71" name="Changes" comment="complete HomePage.tsx">
+      <change afterPath="$PROJECT_DIR$/frontend/public/img/plasticityIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/TechnologyContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/CoderIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/CpuChipIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/DockgeLogo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/JwtIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/NexTermIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/PlasticityIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/ServerStackIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/SimpleIconComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ContactPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ResumePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_ENG.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_ENG.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_PL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/Wiktor_Malyska_PL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/prof.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/img/prof.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppBackground.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AppBackground.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AppWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/appComponents/AppWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/appComponents/AppWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons/CommandLineIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/icons/CommandLineIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons/WebsiteIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/icons/WebsiteIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/navigation/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/HomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +97,7 @@
     "git-widget-placeholder": "rework",
     "ignore.virus.scanning.warn.message": "true",
     "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "C:/Users/wikim/WebstormProjects/portfolio/public",
+    "last_opened_file_path": "C:/Users/wikim/WebstormProjects/portfolio/frontend/src/pages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -88,29 +107,32 @@
     "npm.dev (1).executor": "Run",
     "npm.dev.executor": "Run",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.codinjutsu.tools.jenkins.servers",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\pages" />
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\icons" />
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\public" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\public\img" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\public" />
+      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\appComponents" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\components\navigation" />
       <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend\src\app" />
-      <recent name="C:\Users\wikim\WebstormProjects\portfolio" />
-      <recent name="C:\Users\wikim\WebstormProjects\portfolio\frontend" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="run" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="portfolio" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\wikim\WebstormProjects\portfolio\frontend\public" />
+      <option name="WORKING_DIRECTORY" value="./frontend/public" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="run.bat" />
       <option name="PARAMETERS" value="" />
@@ -170,7 +192,11 @@
       <workItem from="1738540319938" duration="563000" />
       <workItem from="1738545974449" duration="4494000" />
       <workItem from="1738592448166" duration="289000" />
-      <workItem from="1738597036536" duration="8458000" />
+      <workItem from="1738597036536" duration="8526000" />
+      <workItem from="1738625562238" duration="850000" />
+      <workItem from="1738683226042" duration="73000" />
+      <workItem from="1738683312033" duration="1340000" />
+      <workItem from="1738698913081" duration="7365000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md">
       <option name="closed" value="true" />
@@ -420,15 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1738555267236</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add Text, activities containers fixed animations">
+      <option name="closed" value="true" />
+      <created>1738615820668</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1738615820668</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed App files" />
-    <MESSAGE value="Added router to react" />
     <MESSAGE value="Added font and default css" />
     <MESSAGE value="Added catpuccin palletes" />
     <MESSAGE value="Added HomePage.tsx" />
@@ -452,6 +484,8 @@
     <MESSAGE value="added AppWrapper.tsx with blurred circles" />
     <MESSAGE value="add Mouse following blurred circle" />
     <MESSAGE value="add Animated Background" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Animated Background" />
+    <MESSAGE value="add Text, activities containers fixed animations" />
+    <MESSAGE value="complete HomePage.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete HomePage.tsx" />
   </component>
 </project>

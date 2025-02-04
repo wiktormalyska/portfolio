@@ -1,4 +1,4 @@
-import logo from "/logo.png";
+import logo from "/img/logo.png";
 import {NavigationLinks} from "./NavigationLinks.tsx";
 
 export function Navigation() {

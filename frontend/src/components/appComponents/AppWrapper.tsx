@@ -6,11 +6,17 @@ interface AppWrapperProps {
 }
 
 
-export function AppWrapper({children}: AppWrapperProps) {
-    const [mousePos, setMousePos] = useState({x: 0, y: 0});
+
+export function AppWrapper({ children }: AppWrapperProps) {
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
-            setMousePos({x: event.clientX, y: event.clientY});
+            // Obliczanie pozycji myszy względem całej strony
+            const x = event.pageX;
+            const y = event.pageY;
+
+            setMousePos({ x, y });
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -19,22 +25,20 @@ export function AppWrapper({children}: AppWrapperProps) {
             window.removeEventListener('mousemove', handleMouseMove);
         };
     }, []);
+
     return (
-        <>
+        <div className="relative min-h-screen bg-background overflow-hidden">
+            <AppBackground />
             <div
-                className="relative min-h-screen bg-background  overflow-hidden">
-                <AppBackground/>
-                <div
-                    className="absolute w-20 h-20 bg-secondary bg-opacity-50 rounded-full blur-3xl"
-                    style={{
-                        top: `${mousePos.y - 40}px`,
-                        left: `${mousePos.x - 40}px`
-                    }}
-                ></div>
-                <div className="relative z-10 pr-5 pl-5">
-                    {children}
-                </div>
+                className="absolute w-20 h-20 bg-secondary bg-opacity-50 rounded-full blur-3xl"
+                style={{
+                    top: `${mousePos.y - 40}px`,
+                    left: `${mousePos.x - 40}px`
+                }}
+            ></div>
+            <div className="relative z-10 pr-5 pl-5">
+                {children}
             </div>
-        </>
-    )
+        </div>
+    );
 }

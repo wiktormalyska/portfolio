@@ -2,6 +2,9 @@ import {motion} from "motion/react";
 import {ActivityContainer} from "../components/ActivityContainer.tsx";
 import {CommandLineIcon} from "../components/icons/CommandLineIcon.tsx";
 import {WebsiteIcon} from "../components/icons/WebsiteIcon.tsx";
+import {CpuChipIcon} from "../components/icons/CpuChipIcon.tsx";
+import {ServerStackIcon} from "../components/icons/ServerStackIcon.tsx";
+import {TechnologyContainer, TechnologyType} from "../components/TechnologyContainer.tsx";
 
 export function HomePage() {
     return (
@@ -14,7 +17,7 @@ export function HomePage() {
                 <div className="flex flex-row container gap-10">
                     <div className="container max-w-70">
                         <img
-                            src="/prof.jpeg"
+                            src="/img/prof.jpeg"
                             alt="Profile"
                             className="rounded-2xl object-cover container"
                         />
@@ -52,10 +55,36 @@ export function HomePage() {
                 <div className="container flex flex-col gap-5">
                     <div className="text-3xl font-bold">What I'm Doing</div>
                     <div className="flex flex-row container justify-evenly gap-5">
-                        <ActivityContainer Icon={CommandLineIcon()} Text={"Backend Development"} Description={"I build backend systems using Spring, focusing on RESTful APIs, database integration, and application performance."}/>
-                        <ActivityContainer Icon={WebsiteIcon()} Text={"Frontend Development"} Description={"I create dynamic web applications with React, Tailwind CSS, and Vite, focusing on smooth user experiences and fast performance."}/>
+                        <ActivityContainer Icon={CommandLineIcon()} Text={"Backend Development"}
+                                           Description={"I build backend systems using Spring, focusing on RESTful APIs, database integration, and application performance."}/>
+                        <ActivityContainer Icon={WebsiteIcon()} Text={"Frontend Development"}
+                                           Description={"I create dynamic web applications with React, Tailwind CSS, and Vite, focusing on smooth user experiences and fast performance."}/>
                     </div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <ActivityContainer Icon={ServerStackIcon()} Text={"DevOps"}
+                                           Description={"I manage infrastructure and deployment using Docker, and CI/CD pipelines to ensure scalability, reliability, and automation."}/>
+                        <ActivityContainer Icon={CpuChipIcon()} Text={"Electronics & 3D Printing"}
+                                           Description={"I work with ESP32 and DIY electronics, designing and printing custom 3D components for automation and embedded systems projects."}/>
+                    </div>
+                </div>
 
+                <div className="container flex flex-col gap-5">
+                    <div className="text-3xl font-bold">Technologies I Use</div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <TechnologyContainer type={TechnologyType.FRONTEND}/>
+                    </div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <TechnologyContainer type={TechnologyType.BACKEND}/>
+                    </div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <TechnologyContainer type={TechnologyType.DEVOPS}/>
+                    </div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <TechnologyContainer type={TechnologyType.HOMELAB}/>
+                    </div>
+                    <div className="flex flex-row container justify-evenly gap-5">
+                        <TechnologyContainer type={TechnologyType.ELECTRONICS}/>
+                    </div>
                 </div>
             </div>
 
