@@ -1,26 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
 * {
     box-sizing: border-box;
+    font-family: "Inter", serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, sans-serif;
-    box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
-#root {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
+@theme {
+    --color-text: #ebeff6;
+    --color-background: #0a0f16;
+    --color-primary: #94afd5;
+    --color-secondary: #2e5181;
+    --color-accent: #608dcc;
+}
+.nav-text {
+    @apply font-bold stroke-1 text-text text-2xl tracking-widest
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+.nav-link {
+    @apply text-text hover:text-primary transition-all duration-300 ease-in-out;
 }
+
+.nav-link-active {
+    @apply font-bold text-accent text-xl transition-all duration-300 ease-in-out;
+}
+
+.nav-link span {
+    @apply transition-transform duration-300 ease-in-out;
+}
+
+.nav-link:hover span,
+.nav-link-active span {
+    @apply scale-110;
+}
+
