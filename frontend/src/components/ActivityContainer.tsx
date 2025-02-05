@@ -15,10 +15,10 @@ export function ActivityContainer({Icon, Text, Description}: ActivityContainerPr
                     {Icon}
                 </div>
                 <div className="flex flex-col container gap-1">
-                    <div className="text-2xl font-medium max-sm:text-base">
+                    <div className="text-2xl font-medium max-sm:text-base max-md:text-xl">
                         {Text}
                     </div>
-                    <div className="max-sm:text-xs">
+                    <div className="max-sm:text-xs max-md:text-sm">
                         {Description}
                     </div>
                 </div>

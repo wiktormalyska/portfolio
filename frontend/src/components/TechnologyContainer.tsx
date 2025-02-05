@@ -56,8 +56,8 @@ const TechTab = ({name, children}: { name: string, children: ReactNode }) => {
     return (
         <div className="relative flex flex-row z-10 gap-5 container">
             <div className="flex flex-col container gap-1">
-                <div className="text-2xl font-medium max-sm:text-lg">{name}</div>
-                <div className="flex flex-row container gap-2 max-sm:flex-col max-sm:grid max-sm:grid-cols-2">
+                <div className="text-2xl font-medium max-sm:text-lg max-md:text-xl">{name}</div>
+                <div className="flex flex-row container gap-2 max-xl:grid max-sm:grid-cols-2 max-md:grid-cols-3 max-xl:grid-cols-6">
                     {children}
                 </div>
             </div>
