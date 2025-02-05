@@ -27,7 +27,7 @@ body {
 }
 
 .nav-link-active {
-    @apply font-bold text-accent text-xl transition-all duration-300 ease-in-out;
+    @apply font-bold text-accent text-xl transition-all duration-300 ease-in-out max-sm:text-sm;
 }
 
 .nav-link span {

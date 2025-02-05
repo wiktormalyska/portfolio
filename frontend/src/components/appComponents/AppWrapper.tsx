@@ -36,7 +36,7 @@ export function AppWrapper({ children }: AppWrapperProps) {
                     left: `${mousePos.x - 40}px`
                 }}
             ></div>
-            <div className="relative z-10 pr-5 pl-5">
+            <div className="relative z-10 sm:pr-5 sm:pl-5">
                 {children}
             </div>
         </div>
