@@ -21,7 +21,7 @@ export const AppBackground: React.FC = () => {
     }, [isInitial]);
 
     return (
-        <div className="absolute flex justify-center items-center h-screen w-screen blur-3xl">
+        <div className="fixed flex justify-center items-center h-screen w-screen blur-3xl max-sm:blur-2xl ">
             <motion.div
                 initial={{clipPath: polygon}}
                 animate={{clipPath: polygon}}

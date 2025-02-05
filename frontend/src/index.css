@@ -19,7 +19,7 @@ body {
     --color-accent: #608dcc;
 }
 .nav-text {
-    @apply font-bold stroke-1 text-text text-2xl tracking-widest
+    @apply font-bold stroke-1 text-text text-2xl tracking-widest max-md:text-lg
 }
 
 .nav-link {
