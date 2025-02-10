@@ -5,6 +5,9 @@ import {WebsiteIcon} from "../components/icons/WebsiteIcon.tsx";
 import {CpuChipIcon} from "../components/icons/CpuChipIcon.tsx";
 import {ServerStackIcon} from "../components/icons/ServerStackIcon.tsx";
 import {TechnologyContainer, TechnologyType} from "../components/TechnologyContainer.tsx";
+import {LinkedInIcon} from "../components/icons/LinkedInIcon.tsx";
+import {siGithub} from "simple-icons";
+import {LinkIconComponent} from "../components/LinkIconComponent.tsx";
 
 export function HomePage() {
     return (
@@ -31,24 +34,14 @@ export function HomePage() {
                                 DEVELOPER
                             </span>
                         </div>
-                        <div className="h-full flex flex-column">
-                            <p className="mt-4 max-md:mt-0 text-text max-sm:text-sm max-md:text-base max-lg:text-lg">
-                                I'm a software developer with a passion for
-                                building innovative solutions across various
-                                domains. My journey spans from software
-                                development to hands-on work with
-                                3D printing, DIY electronics,
-                                and DevOps practices.
-                                I thrive on creating integrated
-                                systems that blend hardware and software,
-                                whether it's building responsive web
-                                applications, developing embedded systems,
-                                or setting up efficient server environments.
-                                I'm continuously exploring new technologies,
-                                striving to improve workflows,
-                                and creating impactful projects that
-                                merge the physical and digital worlds.
-                            </p>
+                        <div className="h-full flex flex-col gap-3 justify-end">
+                            <div className="text-2xl">
+                                Socials:
+                            </div>
+                            <div className="flex flex-col gap-2 w-auto">
+                                <LinkIconComponent icon={<LinkedInIcon size={32} />} text={"LinkedIn"} href="https://www.linkedin.com/in/wiktor-ma%C5%82yska-a88b31244/"/>
+                                <LinkIconComponent icon={siGithub} text={"GitHub"} fill={"ebeff6"} href="https://github.com/wiktormalyska"/>
+                            </div>
                         </div>
                     </div>
                 </div>
