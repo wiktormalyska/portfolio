@@ -26,7 +26,7 @@ export function LinkIconComponent({icon, text, fill, href}: LinkIconComponentPro
                 </a>
             )}
             <a href={href} target="_blank">
-                <div className="text-xl max-sm:text-base max-md:text-lg">{text}</div>
+                <div className="text-xl max-sm:text-base max-md:text-lg font-bold tracking-wider">{text}</div>
             </a>
         </div>
 
