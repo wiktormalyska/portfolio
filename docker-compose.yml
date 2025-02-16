@@ -12,4 +12,3 @@ networks:
   xcaddy:
     external: true
   portfolio:
-    external: true
