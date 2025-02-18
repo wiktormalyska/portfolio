@@ -19,7 +19,7 @@ export const SimpleIconComponent = ({icon, text, fill,}:SimpleIconComponentProps
             ) : (
                 <div className="w-12 h-12">{icon}</div>
             )}
-            <div className="text-xl max-sm:text-base max-md:text-lg">{text}</div>
+            <div className="text-xl max-sm:text-base max-md:text-lg text-center">{text}</div>
         </div>
     );
 };
