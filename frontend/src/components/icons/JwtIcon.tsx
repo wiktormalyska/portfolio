@@ -1,6 +1,6 @@
-export const JwtIcon = () => {
+export const JwtIcon = ({size}:{size?:number}) => {
     return (
-    <svg width="48px" height="48px" viewBox="0 0 101 101" xmlns="http://www.w3.org/2000/svg">
+    <svg style={{height: size||"48", width:size||"48"}} viewBox="0 0 101 101" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" fillRule="evenodd">
             <g transform="translate(-150 -538)">
                 <g transform="translate(150 413)">

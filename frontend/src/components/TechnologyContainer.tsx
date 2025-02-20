@@ -1,4 +1,4 @@
-import {SimpleIconComponent} from "./icons/SimpleIconComponent.tsx";
+import {SimpleIconComponent} from "./SimpleIconComponent.tsx";
 import {
     siApachemaven, siArduino,
     siAuthentik, siBambulab,
@@ -29,7 +29,7 @@ import {JwtIcon} from "./icons/JwtIcon.tsx";
 import {PlasticityIcon} from "./icons/PlasticityIcon.tsx";
 import {ReactNode} from "react";
 
-export enum TechnologyType {
+enum TechnologyType {
     FRONTEND,
     BACKEND,
     DEVOPS,

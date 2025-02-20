@@ -1,4 +1,5 @@
 import {motion} from "motion/react";
+import {GetListOfIconsFromTechnologyList} from "../components/TechnologyListDescryptor.tsx";
 
 export function ProjectsPage() {
 
@@ -18,7 +19,7 @@ export function ProjectsPage() {
                 "gitHubRepositoryId": 887255609,
                 "repositoryUrl": "https://github.com/wiktormalyska/portfolio",
                 "name": "Portfolio",
-                "description": "Portfolio project",
+                "description": "Projekt SmartGarden – Inteligentny system nawadniania roślin oparty na ESP32. Monitoruje wilgotność gleby, temperaturę i nasłonecznienie, automatycznie dostosowując podlewanie. Aplikacja mobilna umożliwia podgląd danych i ręczne sterowanie. Urządzenie drukowane w 3D, zasilane energią słoneczną.",
                 "imageUrl": "https://wallpaperswide.com/download/bored_cat-wallpaper-1600x900.jpg",
                 "technologies": [
                     "React",
@@ -28,7 +29,7 @@ export function ProjectsPage() {
                 "forked": false
             },
             {
-                "gitHubRepositoryId": 887255609,
+                "gitHubRepositoryId": 8872556029,
                 "repositoryUrl": "https://github.com/wiktormalyska/portfolio",
                 "name": "Bomva",
                 "description": "BomvaBomvaBomvaBomvaBomva Bomva",
@@ -36,7 +37,8 @@ export function ProjectsPage() {
                 "technologies": [
                     "React",
                     "TypeScript",
-                    "Tailwind Css"
+                    "Tailwind Css",
+                    "Jwt"
                 ],
                 "forked": false
             }
@@ -56,28 +58,20 @@ export function ProjectsPage() {
             <div className="flex flex-row gap-10 pt-10">
                 {mockedProjects.map(project => {
                     return (
-                        <a href={project.repositoryUrl} target="_blank">
-                            <div className="relative flex flex-col w-full p-2">
+                        <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="max-w-[50%]">
+                            <div className="relative flex flex-col w-full p-2 h-full">
                                 <div
-                                    className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 z-0"/>
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 mt-7 pl-7 pr-7 text-2xl w-full flex flex-column justify-center">
-                                    <div
-                                        className="bg-neutral-800 h-10 w-full rounded-xl rounded-b-none opacity-50"/>
-                                    <span className="absolute h-10 pt-1">{project.name}</span>
-                                </div>
-                                <img className="w-full h-full p-5 rounded-4xl object-cover" src={project.imageUrl}
+                                    className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 h-[100%]"/>
+                                <img className="w-full h-120 rounded-4xl object-cover" src={project.imageUrl}
                                      alt={project.name}/>
                                 <div
-                                    className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-7 pl-7 pr-7 text-lg w-full flex flex-column justify-center">
-                                    <div
-                                        className="bg-neutral-800 h-20 w-full rounded-xl rounded-t-none opacity-50"/>
-                                    <div className="absolute flex w-full flex-col h-20 mb-7 pl-7 pr-7 justify-between">
-                                        <span className="h-10 pt-1">{project.description}</span>
-                                        <div className="flex w-full flex-row justify-start gap-5 pl-5">
-                                            {project.technologies.map(technology => {
-                                                return (<span className="h-10 pt-1">{technology}</span>)
-                                            })}
+                                    className="text-lg w-full flex flex-col justify-start text-start pl-5 pr-5 h-full">
+                                    <span className="pt-1  text-3xl font-bold tracking-wide">{project.name}</span>
+                                    <div className="flex w-full flex-col justify-between">
+                                        <div className="flex w-full flex-row justify-start gap-5">
+                                            <GetListOfIconsFromTechnologyList technologiesString={project.technologies}/>
                                         </div>
+                                        <span className="pt-1">{project.description}</span>
                                     </div>
 
                                 </div>
