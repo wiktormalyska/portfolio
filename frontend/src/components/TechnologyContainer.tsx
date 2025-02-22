@@ -29,7 +29,7 @@ import {JwtIcon} from "./icons/JwtIcon.tsx";
 import {PlasticityIcon} from "./icons/PlasticityIcon.tsx";
 import {ReactNode} from "react";
 
-enum TechnologyType {
+export enum TechnologyType {
     FRONTEND,
     BACKEND,
     DEVOPS,
