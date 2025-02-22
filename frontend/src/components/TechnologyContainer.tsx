@@ -1,4 +1,4 @@
-import {SimpleIconComponent} from "./icons/SimpleIconComponent.tsx";
+import {SimpleIconComponent} from "./SimpleIconComponent.tsx";
 import {
     siApachemaven, siArduino,
     siAuthentik, siBambulab,
@@ -39,7 +39,7 @@ export enum TechnologyType {
 
 export function TechnologyContainer({type}: { type: TechnologyType }) {
     return (
-        <div className="relative flex flex-col container p-5 rounded-2xl">
+        <div className="relative flex flex-col w-full p-5 rounded-2xl">
             <div className="absolute inset-0 rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 z-0"></div>
             <div className="relative flex flex-row z-10 gap-5">
                 {type === TechnologyType.FRONTEND && <Frontend/>}
@@ -54,10 +54,10 @@ export function TechnologyContainer({type}: { type: TechnologyType }) {
 
 const TechTab = ({name, children}: { name: string, children: ReactNode }) => {
     return (
-        <div className="relative flex flex-row z-10 gap-5 container">
-            <div className="flex flex-col container gap-1">
+        <div className="relative flex flex-row z-10 gap-5 w-full">
+            <div className="flex flex-col w-full gap-1">
                 <div className="text-2xl font-medium max-sm:text-lg max-md:text-xl">{name}</div>
-                <div className="flex flex-row container gap-2 max-xl:grid max-sm:grid-cols-2 max-md:grid-cols-3 max-xl:grid-cols-6">
+                <div className="flex flex-row w-full gap-2 max-xl:grid max-sm:grid-cols-2 max-md:grid-cols-3 max-xl:grid-cols-6">
                     {children}
                 </div>
             </div>

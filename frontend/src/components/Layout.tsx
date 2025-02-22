@@ -35,7 +35,6 @@ export function Layout({children}: LayoutProps) {
         </>
     )
 }
-
 export const usePageContext = () => {
     const context = useContext(PageContext)
     if (!context) {
