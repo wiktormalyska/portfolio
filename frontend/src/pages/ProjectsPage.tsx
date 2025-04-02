@@ -55,10 +55,10 @@ export function ProjectsPage() {
                 className="bg-gradient-to-r from-primary  to-accent inline-block text-transparent bg-clip-text text-6xl font-extrabold">
                 PROJECTS
             </span>
-            <div className="flex flex-row gap-10 pt-10">
+            <div className="flex flex-row max-2xl:flex-col gap-10 pt-10">
                 {mockedProjects.map(project => {
                     return (
-                        <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%]">
+                        <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
                             <div className="relative flex flex-col w-full p-2 h-full">
                                 <div
                                     className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 h-[100%]"/>
