@@ -7,7 +7,7 @@ services:
     networks:
       - xcaddy
     environment:
-      - VITE_PORTFOLIO_PROJECTS_API_URL=https://portfolio-projects-api:8080
+      - VITE_PORTFOLIO_PROJECTS_API_URL=https://portfolio-projects-api.wiktormalyska.ovh
 
 networks:
   xcaddy:
