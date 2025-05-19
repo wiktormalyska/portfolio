@@ -64,7 +64,7 @@ export const GetListOfIconsFromTechnologyList = ({technologiesString}: GetListOf
         if (typeof technology.icon === "object" && "path" in technology.icon) {
             return (
                 <div
-                    className="flex flex-row gap-3 justify-center items-center p-2 pl-4 pr-4 bg-neutral-900/30 rounded-full">
+                    className="flex flex-row gap-3 justify-center items-center p-2 pl-4 pr-4 bg-neutral-900/30 rounded-full" key={technologyString}>
                     <svg key={technologyString} className="w-8 h-8" viewBox="0 0 24 24" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path d={technology.icon.path} fill={"#" + technology.icon.hex}/>
@@ -75,7 +75,7 @@ export const GetListOfIconsFromTechnologyList = ({technologiesString}: GetListOf
         }
 
         return (
-            <div className="flex flex-row gap-3 justify-center items-center p-2 pl-4 pr-4 bg-neutral-900/30 rounded-full">
+            <div className="flex flex-row gap-3 justify-center items-center p-2 pl-4 pr-4 bg-neutral-900/30 rounded-full" key={technologyString}>
                 <div key={technologyString} className="w-8 h-8">
                     {technology.icon}
                 </div>

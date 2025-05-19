@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: refactor page context management and update navigation links">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/JavaIcon.tsx" afterDir="false" />
+    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: add allowed hosts configuration in Vite server and update properties component formatting">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectsPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +48,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rework&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,6 +81,7 @@
       <workItem from="1747660103417" duration="628000" />
       <workItem from="1747672820552" duration="455000" />
       <workItem from="1747673289346" duration="7940000" />
+      <workItem from="1747689653734" duration="2621000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add default project configuration files">
       <option name="closed" value="true" />
@@ -107,7 +107,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747677276677</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: force npm install in Dockerfile to resolve dependency issues">
+      <option name="closed" value="true" />
+      <created>1747689700587</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747689700587</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add allowed hosts configuration in Vite server and update properties component formatting">
+      <option name="closed" value="true" />
+      <created>1747689814660</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747689814660</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +133,8 @@
     <MESSAGE value="feat: add default project configuration files" />
     <MESSAGE value="feat: add environment variable for portfolio projects API URL and update project handling" />
     <MESSAGE value="feat: refactor page context management and update navigation links" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: refactor page context management and update navigation links" />
+    <MESSAGE value="feat: force npm install in Dockerfile to resolve dependency issues" />
+    <MESSAGE value="feat: add allowed hosts configuration in Vite server and update properties component formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add allowed hosts configuration in Vite server and update properties component formatting" />
   </component>
 </project>
