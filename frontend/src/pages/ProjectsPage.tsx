@@ -32,19 +32,21 @@ export function ProjectsPage() {
                 {projects!.map(project => {
                     return (
                         <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
-                            <div className="relative flex flex-col w-full p-2 h-full gap-2">
+                            <div className="relative flex flex-col w-full p-2 h-full">
                                 <div
                                     className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6"/>
-                                <img className="w-full h-120 rounded-2xl object-cover" src={project.imageUrl}
-                                     alt={project.name}/>
+                                <img className="w-full rounded-2xl object-cover min-h-50 max-h-100" src={project.imageUrl}
+                                     alt={project.name}
+                                     onError={(e) => (e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png")}
+                                />
                                 <div
-                                    className="text-lg w-full flex flex-col justify-start text-start pl-5 pr-5 h-full">
-                                    <span className="pt-1 pb-1  text-3xl font-bold tracking-wide">{project.name}</span>
+                                    className="text-lg w-full flex flex-col justify-start text-start pl-5 pr-5 pb-5 pt-5 gap-5">
+                                    <span className="text-3xl font-bold tracking-wide">{project.name}</span>
                                     <div className="flex w-full flex-col justify-between">
                                         <div className="flex w-full flex-row justify-start gap-5">
                                             <GetListOfIconsFromTechnologyList technologiesString={project.technologies}/>
                                         </div>
-                                        <span className="pt-2 text-justify text-xl font-medium">
+                                        <span className="pt-5 text-justify text-xl font-medium">
                                             {project.description}
                                         </span>
                                     </div>

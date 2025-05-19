@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: add environment variable for portfolio projects API URL and update project handling">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/PageContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/navigation/NavigationLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/navigation/NavigationLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: refactor page context management and update navigation links">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/icons/JavaIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ProjectsPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +88,7 @@
       <updated>1747660102233</updated>
       <workItem from="1747660103417" duration="628000" />
       <workItem from="1747672820552" duration="455000" />
-      <workItem from="1747673289346" duration="3149000" />
+      <workItem from="1747673289346" duration="7940000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add default project configuration files">
       <option name="closed" value="true" />
@@ -106,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747673341071</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add environment variable for portfolio projects API URL and update project handling">
+      <option name="closed" value="true" />
+      <created>1747677271579</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747677271580</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: refactor page context management and update navigation links">
+      <option name="closed" value="true" />
+      <created>1747677276677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747677276677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add default project configuration files" />
     <MESSAGE value="feat: add environment variable for portfolio projects API URL and update project handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add environment variable for portfolio projects API URL and update project handling" />
+    <MESSAGE value="feat: refactor page context management and update navigation links" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: refactor page context management and update navigation links" />
   </component>
 </project>
