@@ -30,8 +30,6 @@ export function ProjectsPage() {
             </span>
             <div className="flex flex-row max-2xl:flex-col gap-10 pt-10">
                 {projects!.map(project => {
-                    console.log(project.imageUrl)
-
                     return (
                         <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
                             <div className="relative flex flex-col w-full p-2 h-full">
