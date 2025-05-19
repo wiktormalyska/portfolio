@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: add allowed hosts configuration in Vite server and update properties component formatting">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/dev.xml" afterDir="false" />
+    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: update portfolio projects API URL to use HTTPS and fix key assignment in TechnologyListDescryptor component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/TechnologyListDescryptor.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,26 +46,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\wikim\\WebstormProjects\\portfolio\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -81,7 +79,8 @@
       <workItem from="1747660103417" duration="628000" />
       <workItem from="1747672820552" duration="455000" />
       <workItem from="1747673289346" duration="7940000" />
-      <workItem from="1747689653734" duration="2621000" />
+      <workItem from="1747689653734" duration="3477000" />
+      <workItem from="1747695182213" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add default project configuration files">
       <option name="closed" value="true" />
@@ -123,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747689814660</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: update portfolio projects API URL to use HTTPS and fix key assignment in TechnologyListDescryptor component">
+      <option name="closed" value="true" />
+      <created>1747694348051</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747694348051</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +142,7 @@
     <MESSAGE value="feat: refactor page context management and update navigation links" />
     <MESSAGE value="feat: force npm install in Dockerfile to resolve dependency issues" />
     <MESSAGE value="feat: add allowed hosts configuration in Vite server and update properties component formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add allowed hosts configuration in Vite server and update properties component formatting" />
+    <MESSAGE value="feat: update portfolio projects API URL to use HTTPS and fix key assignment in TechnologyListDescryptor component" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update portfolio projects API URL to use HTTPS and fix key assignment in TechnologyListDescryptor component" />
   </component>
 </project>

@@ -6,12 +6,9 @@ services:
     #   - "3000:3000"
     networks:
       - xcaddy
-      - portfolio
     environment:
       - VITE_PORTFOLIO_PROJECTS_API_URL=https://portfolio-projects-api:8080
 
 networks:
   xcaddy:
-    external: true
-  portfolio:
     external: true
