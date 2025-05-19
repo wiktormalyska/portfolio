@@ -1,9 +1,14 @@
 import {NavLink} from "react-router-dom";
-import {usePageContext} from "../Layout.tsx";
+import {usePageContext} from "../../hooks/PageContext.tsx";
+import {useEffect} from "react";
 
 export function NavigationLinks() {
     const {page, setPage} = usePageContext()
 
+    useEffect(() => {
+        const currentPath = location.pathname.slice(1) || "home";
+        setPage(currentPath);
+    }, [setPage])
 
     return (
         <>
