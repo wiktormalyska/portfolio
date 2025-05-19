@@ -14,6 +14,10 @@ export function ProjectsPage() {
         return <div>Error loading projects.</div>;
     }
 
+    if (!projects || projects.length === 0) {
+        return <div>No projects found.</div>;
+    }
+
     return (
         <motion.div
             initial={{opacity: 0}}
@@ -25,12 +29,12 @@ export function ProjectsPage() {
                 PROJECTS
             </span>
             <div className="flex flex-row max-2xl:flex-col gap-10 pt-10">
-                {projects.map(project => {
+                {projects!.map(project => {
                     return (
                         <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
                             <div className="relative flex flex-col w-full p-2 h-full gap-2">
                                 <div
-                                    className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 h-[100%]"/>
+                                    className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6"/>
                                 <img className="w-full h-120 rounded-2xl object-cover" src={project.imageUrl}
                                      alt={project.name}/>
                                 <div
