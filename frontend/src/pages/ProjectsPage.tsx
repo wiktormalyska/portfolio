@@ -1,49 +1,18 @@
 import {motion} from "motion/react";
 import {GetListOfIconsFromTechnologyList} from "../components/TechnologyListDescryptor.tsx";
+import {usePortfolioProjects} from "../hooks/PortfilioProjectsHook.tsx";
 
 export function ProjectsPage() {
 
-    interface Project {
-        gitHubRepositoryId: number,
-        repositoryUrl: string,
-        name: string,
-        description: string,
-        imageUrl: string,
-        technologies: string[],
-        forked: boolean
+    const {data: projects, isLoading, error} = usePortfolioProjects('wiktormalyska')
+
+    if (isLoading) {
+        return <div>Loading...</div>;
     }
 
-    const mockedProjects: Project[] =
-        [
-            {
-                "gitHubRepositoryId": 887255609,
-                "repositoryUrl": "https://github.com/wiktormalyska/portfolio",
-                "name": "Portfolio",
-                "description": "Projekt SmartGarden – Inteligentny system nawadniania roślin oparty na ESP32. Monitoruje wilgotność gleby, temperaturę i nasłonecznienie, automatycznie dostosowując podlewanie. Aplikacja mobilna umożliwia podgląd danych i ręczne sterowanie. Urządzenie drukowane w 3D, zasilane energią słoneczną.",
-                "imageUrl": "https://wallpaperswide.com/download/bored_cat-wallpaper-1600x900.jpg",
-                "technologies": [
-                    "React",
-                    "TypeScript",
-                    "Tailwind Css"
-                ],
-                "forked": false
-            },
-            {
-                "gitHubRepositoryId": 8872556029,
-                "repositoryUrl": "https://github.com/wiktormalyska/portfolio",
-                "name": "Bomva",
-                "description": "BomvaBomvaBomvaBomvaBomva Bomva",
-                "imageUrl": "https://wallpaperswide.com/download/bored_cat-wallpaper-1600x900.jpg",
-                "technologies": [
-                    "React",
-                    "TypeScript",
-                    "Tailwind Css",
-                    "Jwt"
-                ],
-                "forked": false
-            }
-        ]
-
+    if (error) {
+        return <div>Error loading projects.</div>;
+    }
 
     return (
         <motion.div
@@ -52,26 +21,28 @@ export function ProjectsPage() {
             transition={{duration: 1}}
             className="w-full flex justify-center pt-10 transition-opacity flex-col text-center pl-20 pr-20">
             <span
-                className="bg-gradient-to-r from-primary  to-accent inline-block text-transparent bg-clip-text text-6xl font-extrabold">
+                className="bg-gradient-to-r from-primary  to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold">
                 PROJECTS
             </span>
             <div className="flex flex-row max-2xl:flex-col gap-10 pt-10">
-                {mockedProjects.map(project => {
+                {projects.map(project => {
                     return (
                         <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
-                            <div className="relative flex flex-col w-full p-2 h-full">
+                            <div className="relative flex flex-col w-full p-2 h-full gap-2">
                                 <div
                                     className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 h-[100%]"/>
-                                <img className="w-full h-120 rounded-4xl object-cover" src={project.imageUrl}
+                                <img className="w-full h-120 rounded-2xl object-cover" src={project.imageUrl}
                                      alt={project.name}/>
                                 <div
                                     className="text-lg w-full flex flex-col justify-start text-start pl-5 pr-5 h-full">
-                                    <span className="pt-1  text-3xl font-bold tracking-wide">{project.name}</span>
+                                    <span className="pt-1 pb-1  text-3xl font-bold tracking-wide">{project.name}</span>
                                     <div className="flex w-full flex-col justify-between">
                                         <div className="flex w-full flex-row justify-start gap-5">
                                             <GetListOfIconsFromTechnologyList technologiesString={project.technologies}/>
                                         </div>
-                                        <span className="pt-1">{project.description}</span>
+                                        <span className="pt-2 text-justify text-xl font-medium">
+                                            {project.description}
+                                        </span>
                                     </div>
 
                                 </div>
@@ -83,5 +54,3 @@ export function ProjectsPage() {
         </motion.div>
     )
 }
-
-//TODO: Deskryptor tagów
