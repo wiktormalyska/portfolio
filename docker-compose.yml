@@ -6,7 +6,10 @@ services:
     #   - "3000:3000"
     networks:
       - xcaddy
+      - portfolio
 
 networks:
   xcaddy:
+    external: true
+  portfolio:
     external: true
