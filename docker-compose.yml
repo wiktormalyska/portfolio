@@ -7,6 +7,8 @@ services:
     networks:
       - xcaddy
       - portfolio
+    environment:
+      - VITE_PORTFOLIO_PROJECTS_API_URL=http://portfolio-projects-api:8080
 
 networks:
   xcaddy:
