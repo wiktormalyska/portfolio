@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: update image URL in meta.json and adjust task summaries in workspace.xml" />
+    <list default="true" id="f3ca565a-2f8c-4401-b058-d522b97c9f29" name="Changes" comment="feat: add z-index to image in ProjectsPage for improved layering">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +62,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="npm.prod">
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.prod" />
+    </list>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,6 +87,10 @@
       <workItem from="1747673289346" duration="7940000" />
       <workItem from="1747689653734" duration="3477000" />
       <workItem from="1747695182213" duration="1032000" />
+      <workItem from="1747696284060" duration="393000" />
+      <workItem from="1747696750701" duration="66000" />
+      <workItem from="1748028263125" duration="1214000" />
+      <workItem from="1748034676605" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add default project configuration files">
       <option name="closed" value="true" />
@@ -152,7 +164,31 @@
       <option name="project" value="LOCAL" />
       <updated>1747696218824</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: update image URL in ProjectsPage and adjust task summaries in workspace.xml">
+      <option name="closed" value="true" />
+      <created>1747696476937</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747696476937</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: remove console log for project image URL in ProjectsPage">
+      <option name="closed" value="true" />
+      <created>1747696671334</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747696671334</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: add z-index to image in ProjectsPage for improved layering">
+      <option name="closed" value="true" />
+      <created>1747696799646</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747696799646</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +203,9 @@
     <MESSAGE value="feat: update portfolio projects API URL to use HTTPS and fix key assignment in TechnologyListDescryptor component" />
     <MESSAGE value="feat: update portfolio projects API URL to use the production domain" />
     <MESSAGE value="feat: update image URL in meta.json and adjust task summaries in workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update image URL in meta.json and adjust task summaries in workspace.xml" />
+    <MESSAGE value="feat: update image URL in ProjectsPage and adjust task summaries in workspace.xml" />
+    <MESSAGE value="feat: remove console log for project image URL in ProjectsPage" />
+    <MESSAGE value="feat: add z-index to image in ProjectsPage for improved layering" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add z-index to image in ProjectsPage for improved layering" />
   </component>
 </project>
