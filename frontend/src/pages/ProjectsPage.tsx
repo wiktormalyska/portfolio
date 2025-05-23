@@ -35,7 +35,7 @@ export function ProjectsPage() {
                             <div className="relative flex flex-col w-full p-2 h-full">
                                 <div
                                     className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6"/>
-                                <img className="w-full rounded-2xl object-cover min-h-50 max-h-100 z-40" src={project.imageUrl}
+                                <img className="w-full rounded-2xl object-cover object-top min-h-50 max-h-100 z-40" src={project.imageUrl}
                                      alt={project.name}
                                      onError={(e) => (e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png")}
                                 />
