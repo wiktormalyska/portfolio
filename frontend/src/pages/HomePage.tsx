@@ -16,7 +16,7 @@ export function HomePage() {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1}}
-            className="w-full flex justify-center pt-20 transition-opacity max-md:pt-2 max-lg:pt-10">
+            className="w-full flex justify-center pt-10 transition-opacity max-md:pt-2 max-lg:pt-10">
             <div
                 className="flex flex-col justify-items-center items-center w-[70%] p-10 gap-10 max-lg:w-[90%] max-lg:gap-5 max-lg:p-0">
                 <div className="flex flex-row max-lg:flex-col w-full gap-10 max-lg:gap-2">

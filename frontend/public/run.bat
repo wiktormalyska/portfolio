@@ -3,8 +3,8 @@
 del Wiktor_Malyska_PL.pdf
 del Wiktor_Malyska_ENG.pdf
 
-set PL_URL=https://storage.rxresu.me/cltran1hf006otx3v19aht12j/resumes/PL.pdf
-set ENG_URL=https://storage.rxresu.me/cltran1hf006otx3v19aht12j/resumes/ENG.pdf
+set PL_URL=https://storage.rxresu.me/cltran1hf006otx3v19aht12j/resumes/pl.pdf
+set ENG_URL=https://storage.rxresu.me/cltran1hf006otx3v19aht12j/resumes/eng.pdf
 
 powershell -Command "Invoke-WebRequest -Uri %PL_URL% -OutFile Wiktor_Malyska_PL.pdf"
 
