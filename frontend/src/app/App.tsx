@@ -9,19 +9,15 @@ import {ContactPage} from "../pages/ContactPage.tsx";
 export const App = () => {
 
     return (
-        <>
-            <script defer src="https://metrics.wiktormalyska.ovh/script.js"
-                    data-website-id="19285288-34c5-420c-9fa7-45fc4cf27337"></script>
-            <PageProvider>
-                <Layout>
-                    <Routes>
-                        <Route path="/" element={<HomePage/>}/>
-                        <Route path="/projects" element={<ProjectsPage/>}/>
-                        <Route path="/resume" element={<ResumePage/>}/>
-                        <Route path="/contact" element={<ContactPage/>}/>
-                    </Routes>
-                </Layout>
-            </PageProvider>
-        </>
+        <PageProvider>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/projects" element={<ProjectsPage/>}/>
+                    <Route path="/resume" element={<ResumePage/>}/>
+                    <Route path="/contact" element={<ContactPage/>}/>
+                </Routes>
+            </Layout>
+        </PageProvider>
     );
 }
