@@ -19,15 +19,21 @@ pipeline {
         stage('Build frontend') {
             steps {
                 dir ('frontend') {
-                    sh 'docker build -t $FRONTEND_IMAGE .'
+                    sh 'docker build --no-cache -t $FRONTEND_IMAGE .'
                 }
+            }
+        }
+        stage('Verify image') {
+            steps {
+                sh 'docker inspect $FRONTEND_IMAGE'
             }
         }
         //Deploy
         stage('Deploy') {
             steps {
-                sh 'docker-compose down'
+                sh 'docker-compose down || true'
                 sh 'docker-compose up -d'
+                sh 'sleep 5 && docker-compose ps'
             }
         }
     }
