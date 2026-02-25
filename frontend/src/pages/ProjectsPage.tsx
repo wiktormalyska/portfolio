@@ -28,7 +28,7 @@ export function ProjectsPage() {
                 className="bg-gradient-to-r from-primary  to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl ">
                 PROJECTS
             </span>
-            <div className="flex flex-row max-2xl:flex-col gap-10 pt-10 max-lg:pt-3">
+            <div className="flex flex-row max-xl:flex-col gap-10 pt-10 max-lg:pt-3">
                 {projects!.map(project => {
                     return (
                         <a key={project.gitHubRepositoryId} href={project.repositoryUrl} target="_blank" className="w-[50%] max-2xl:w-full ">
