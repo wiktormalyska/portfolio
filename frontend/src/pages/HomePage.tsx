@@ -57,7 +57,7 @@ export function HomePage() {
                     <div className="w-full flex flex-col gap-4 justify-center">
                         <div className="inline-flex max-lg:justify-center">
                             <span className="text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent">
-                                Available for work
+                                Currently Employed
                             </span>
                         </div>
                         <div className="font-display text-5xl font-extrabold tracking-tight max-lg:text-center max-md:text-3xl text-text">
