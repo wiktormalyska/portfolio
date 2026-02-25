@@ -16,10 +16,14 @@ export function HomePage() {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{duration: 1}}
-            className="w-full flex justify-center pt-20 transition-opacity max-md:pt-2 max-lg:pt-10">
+            className="w-full flex justify-center pt-10 transition-opacity max-md:pt-2 max-lg:pt-10">
             <div
                 className="flex flex-col justify-items-center items-center w-[70%] p-10 gap-10 max-lg:w-[90%] max-lg:gap-5 max-lg:p-0">
-                <div className="flex flex-row max-lg:flex-col w-full gap-10 max-lg:gap-2">
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, delay: 0.2}}
+                    className="flex flex-row max-lg:flex-col w-full gap-10 max-lg:gap-2">
                     <div
                         className="w-full lg:max-w-50 max-lg:justify-center max-lg:flex max-lg:flex-col max-lg:w-full max-lg:items-center max-sm:gap-2">
                         <img
@@ -50,9 +54,13 @@ export function HomePage() {
                                                href={"mailto:wiktormalyska03@gmail.com"}/>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="w-full flex flex-col gap-5">
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, delay: 0.4}}
+                    className="w-full flex flex-col gap-5">
                     <div className="text-3xl font-bold max-md:text-xl max-lg:text-2xl">What I'm Doing</div>
                     <div className="flex flex-row w-full justify-evenly gap-5 max-lg:flex-col">
                         <ActivityContainer Icon={CommandLineIcon()} Text={"Backend Development"}
@@ -66,9 +74,13 @@ export function HomePage() {
                         <ActivityContainer Icon={CpuChipIcon()} Text={"Electronics & 3D Printing"}
                                            Description={"I work with ESP32 and DIY electronics, designing and printing custom 3D components for automation and embedded systems projects."}/>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="w-full flex flex-col gap-5">
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.8, delay: 0.6}}
+                    className="w-full flex flex-col gap-5">
                     <div className="text-3xl font-bold max-md:text-xl max-lg:text-2xl">Technologies I Use</div>
                     <div className="flex flex-row w-full justify-evenly gap-5">
                         <TechnologyContainer type={TechnologyType.FRONTEND}/>
@@ -85,7 +97,7 @@ export function HomePage() {
                     <div className="flex flex-row w-full justify-evenly gap-5">
                         <TechnologyContainer type={TechnologyType.ELECTRONICS}/>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </motion.div>
