@@ -7,6 +7,7 @@ import {ResumePage} from "../pages/ResumePage.tsx";
 import {ContactPage} from "../pages/ContactPage.tsx";
 
 export const App = () => {
+
     return (
         <PageProvider>
             <Layout>
