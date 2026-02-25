@@ -20,9 +20,11 @@ export const PageProvider = ({children}: { children: ReactNode }) => {
 export function Layout({children}: LayoutProps) {
     return (
         <>
-            <div className={"w-full h-max flex flex-col text-text"}>
+            <div className={"w-full min-h-screen flex flex-col text-text"}>
                 <Navigation/>
-                {children}
+                <main className="flex-1">
+                    {children}
+                </main>
                 <Footer/>
             </div>
         </>

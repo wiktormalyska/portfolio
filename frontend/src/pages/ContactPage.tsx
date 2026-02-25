@@ -1,31 +1,33 @@
-import {motion} from "motion/react";
+import {m} from "framer-motion";
 import {ContactInfoList} from "../components/ContactInfoList.tsx";
 
 export function ContactPage() {
     return (
-        <motion.div
+        <m.div
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            transition={{duration: 1}}
-            className="w-full flex justify-center pt-10 max-lg:pt-2 transition-opacity flex-col items-center text-center pl-20 pr-20 max-md:pl-5 max-md:pr-5">
-            <span
-                className="bg-gradient-to-r from-primary  to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl ">
+            transition={{duration: 0.8}}
+            className="w-full flex justify-center pt-12 max-lg:pt-4 flex-col items-center pb-16 px-20 max-md:px-5">
+            <span className="font-display bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl tracking-tight">
                 CONTACT
             </span>
 
-            <motion.p
-                initial={{opacity: 0, y: 20}}
+            <m.p
+                initial={{opacity: 0, y: 16}}
                 animate={{opacity: 1, y: 0}}
-                transition={{duration: 0.8, delay: 0.2}}
-                className="mt-5 text-lg opacity-70 max-w-2xl max-lg:text-base"
+                transition={{duration: 0.7, delay: 0.2}}
+                className="mt-4 text-base text-text/60 max-w-xl text-center leading-relaxed max-lg:text-sm"
             >
                 Feel free to reach out! I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-            </motion.p>
+            </m.p>
 
-            <div className="mt-10 w-full flex justify-center">
+            <m.div
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.7, delay: 0.35}}
+                className="mt-10 w-full flex justify-center max-lg:mt-6">
                 <ContactInfoList/>
-            </div>
-
-        </motion.div>
+            </m.div>
+        </m.div>
     )
 }

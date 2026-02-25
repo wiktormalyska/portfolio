@@ -8,17 +8,16 @@ interface ActivityContainerProps {
 
 export function ActivityContainer({Icon, Text, Description}: ActivityContainerProps) {
     return (
-        <div className="relative flex flex-col w-full p-5 rounded-2xl">
-            <div className="absolute inset-0  rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 z-0"></div>
-            <div className="relative flex flex-row z-10 gap-5">
-                <div className="flex items-center w-20 h-full justify-center">
+        <div className="glass-card flex flex-col w-full p-6">
+            <div className="flex flex-row gap-5">
+                <div className="flex items-center w-16 h-full justify-center shrink-0 text-accent">
                     {Icon}
                 </div>
-                <div className="flex flex-col w-full gap-1">
-                    <div className="text-2xl font-medium max-sm:text-base max-md:text-xl">
+                <div className="flex flex-col w-full gap-2">
+                    <div className="font-display text-xl font-semibold max-sm:text-base max-md:text-lg text-text">
                         {Text}
                     </div>
-                    <div className="max-sm:text-xs max-md:text-sm">
+                    <div className="text-text/70 text-sm leading-relaxed max-sm:text-xs">
                         {Description}
                     </div>
                 </div>

@@ -1,33 +1,28 @@
-import {useState, useEffect} from "react";
-import {motion} from "framer-motion";
+import {useState, useEffect, useRef} from "react";
+import {m} from "framer-motion";
+
+const generatePolygon = () =>
+    `polygon(${Array.from({length: 24}, () => `${Math.random() * 100}% ${Math.random() * 100}%`).join(", ")})`;
 
 export const AppBackground: React.FC = () => {
-    const generatePolygon = () =>
-        `polygon(${Array.from({length: 24}, () => `${Math.random() * 100}% ${Math.random() * 100}%`).join(", ")})`;
-
-    const [polygon, setPolygon] = useState(generatePolygon());
-    const [isInitial, setIsInitial] = useState(true)
+    const initialClipPath = useRef(generatePolygon());
+    const [clipPath, setClipPath] = useState(initialClipPath.current);
 
     useEffect(() => {
-        if (isInitial){
-            setPolygon(generatePolygon());
-            setIsInitial(false)
-        }
         const interval = setInterval(() => {
-            setPolygon(generatePolygon());
+            setClipPath(generatePolygon());
         }, 6000);
-
         return () => clearInterval(interval);
-    }, [isInitial]);
+    }, []);
 
     return (
-        <div className="fixed flex justify-center items-center h-screen w-screen blur-3xl max-sm:blur-2xl ">
-            <motion.div
-                initial={{clipPath: polygon}}
-                animate={{clipPath: polygon}}
+        <div className="fixed flex justify-center items-center h-screen w-screen blur-3xl max-sm:blur-2xl pointer-events-none">
+            <m.div
+                initial={{clipPath: initialClipPath.current}}
+                animate={{clipPath}}
                 transition={{duration: 6, ease: "easeInOut"}}
-                className="aspect-[1.7] h-screen w-screen bg-gradient-to-r from-blue-500 to-white/10 opacity-60"
-            ></motion.div>
+                className="h-screen w-screen bg-gradient-to-r from-blue-500 to-white/10 opacity-60"
+            />
         </div>
     );
 };

@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
 * {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", sans-serif;
 }
 
 body {
@@ -13,21 +17,82 @@ body {
 
 @theme {
     --color-text: #ebeff6;
-    --color-background: #0a0f16;
+    --color-background: #080c12;
     --color-primary: #94afd5;
-    --color-secondary: #2e5181;
+    --color-secondary: #1e3a5f;
     --color-accent: #608dcc;
+    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-border: rgba(148, 175, 213, 0.15);
+    --color-glow: rgba(96, 141, 204, 0.22);
+    --font-display: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
 }
+
+@utility font-display {
+    font-family: var(--font-display), sans-serif;
+}
+
+/* ...existing code... */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #080c12;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(96, 141, 204, 0.35);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 141, 204, 0.6);
+}
+
+/* Cards */
+.glass-card {
+    @apply relative rounded-2xl border border-[rgba(148,175,213,0.18)] transition-all duration-300;
+    background: rgba(14, 22, 38, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 175, 213, 0.08);
+}
+.glass-card:hover {
+    border-color: rgba(96, 141, 204, 0.45);
+    background: rgba(16, 26, 46, 0.85);
+    box-shadow: 0 8px 40px rgba(96, 141, 204, 0.15), 0 4px 24px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(148, 175, 213, 0.12);
+}
+
+/* Section headings */
+.section-heading {
+    @apply font-display font-bold text-3xl max-md:text-xl max-lg:text-2xl border-l-4 border-accent pl-3;
+}
+
+/* Navigation */
 .nav-text {
-    @apply font-bold stroke-1 text-text text-2xl tracking-widest max-md:text-lg
+    @apply font-bold stroke-1 text-text text-2xl tracking-widest max-md:text-lg font-display;
 }
 
 .nav-link {
-    @apply text-text hover:text-primary transition-all duration-300 ease-in-out;
+    @apply relative text-text/80 hover:text-primary transition-all duration-300 ease-in-out font-medium tracking-wide px-1 py-1;
+}
+
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-accent transition-all duration-300 ease-in-out rounded-full;
+}
+
+.nav-link:hover::after {
+    @apply w-full;
 }
 
 .nav-link-active {
-    @apply font-bold text-accent text-xl transition-all duration-300 ease-in-out max-sm:text-sm;
+    @apply font-bold text-accent transition-all duration-300 ease-in-out max-sm:text-sm px-1 py-1 relative;
+}
+
+.nav-link-active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-accent rounded-full;
 }
 
 .nav-link span {
@@ -36,6 +101,6 @@ body {
 
 .nav-link:hover span,
 .nav-link-active span {
-    @apply scale-110;
+    @apply scale-105;
 }
 

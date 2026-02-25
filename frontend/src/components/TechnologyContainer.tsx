@@ -39,9 +39,8 @@ export enum TechnologyType {
 
 export function TechnologyContainer({type}: { type: TechnologyType }) {
     return (
-        <div className="relative flex flex-col w-full p-5 rounded-2xl">
-            <div className="absolute inset-0 rounded-2xl backdrop-blur-4xl blur-xs bg-text opacity-6 z-0"></div>
-            <div className="relative flex flex-row z-10 gap-5">
+        <div className="glass-card flex flex-col w-full p-6">
+            <div className="flex flex-row w-full">
                 {type === TechnologyType.FRONTEND && <Frontend/>}
                 {type === TechnologyType.BACKEND && <Backend/>}
                 {type === TechnologyType.DEVOPS && <DevOps/>}
@@ -54,10 +53,10 @@ export function TechnologyContainer({type}: { type: TechnologyType }) {
 
 const TechTab = ({name, children}: { name: string, children: ReactNode }) => {
     return (
-        <div className="relative flex flex-row z-10 gap-5 w-full">
-            <div className="flex flex-col w-full gap-1">
-                <div className="text-2xl font-medium max-sm:text-lg max-md:text-xl">{name}</div>
-                <div className="flex flex-row w-full gap-2 max-xl:grid max-sm:grid-cols-2 max-md:grid-cols-3 max-xl:grid-cols-6">
+        <div className="flex flex-row z-10 gap-5 w-full">
+            <div className="flex flex-col w-full gap-3">
+                <div className="font-display text-lg font-semibold max-sm:text-base max-md:text-base text-primary border-l-2 border-accent pl-3">{name}</div>
+                <div className="flex flex-row w-full gap-2 flex-wrap max-xl:grid max-sm:grid-cols-3 max-md:grid-cols-4 max-xl:grid-cols-6">
                     {children}
                 </div>
             </div>
