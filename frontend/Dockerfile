@@ -1,4 +1,6 @@
 FROM node:latest AS build
+ARG VITE_PORTFOLIO_PROJECTS_API_URL
+ENV VITE_PORTFOLIO_PROJECTS_API_URL=$VITE_PORTFOLIO_PROJECTS_API_URL
 WORKDIR /react-docker
 COPY package.json package-lock.json* /react-docker/
 RUN npm install --force

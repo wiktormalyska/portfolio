@@ -6,6 +6,7 @@ pipeline {
 
     environment {
         FRONTEND_IMAGE = 'portfolio-frontend:latest'
+        VITE_PORTFOLIO_PROJECTS_API_URL = 'https://portfolio-projects-api.wiktormalyska.ovh'
     }
 
     stages{
@@ -19,7 +20,7 @@ pipeline {
         stage('Build frontend') {
             steps {
                 dir ('frontend') {
-                    sh 'docker build --no-cache -t $FRONTEND_IMAGE .'
+                    sh 'docker build --no-cache --build-arg VITE_PORTFOLIO_PROJECTS_API_URL=$VITE_PORTFOLIO_PROJECTS_API_URL -t $FRONTEND_IMAGE .'
                 }
             }
         }
