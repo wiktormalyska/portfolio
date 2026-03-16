@@ -11,18 +11,22 @@ interface languageOptions {
     pdfFile: string
 }
 
+const baseUrl = import.meta.env.BASE_URL || '/';
+const plPdf = `${baseUrl}Wiktor_Malyska_PL.pdf`;
+const engPdf = `${baseUrl}Wiktor_Malyska_ENG.pdf`;
+
 const languages: languageOptions[] = [
     {
         code: 'PL',
-        element: <ResumePreview file="/Wiktor_Malyska_PL.pdf" pageNumber={1}/>,
+        element: <ResumePreview file={plPdf} pageNumber={1}/> ,
         iconCode: 'PL',
-        pdfFile: '/Wiktor_Malyska_PL.pdf'
+        pdfFile: plPdf
     },
     {
         code: 'ENG',
-        element: <ResumePreview file="/Wiktor_Malyska_ENG.pdf" pageNumber={1}/>,
+        element: <ResumePreview file={engPdf} pageNumber={1}/> ,
         iconCode: 'GB',
-        pdfFile: '/Wiktor_Malyska_ENG.pdf'
+        pdfFile: engPdf
     }
 ]
 

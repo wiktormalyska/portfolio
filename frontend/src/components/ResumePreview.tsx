@@ -1,7 +1,8 @@
 import {useRef, useState, useEffect} from 'react';
 import {Document, Page, pdfjs} from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+// Resolve worker path via bundler so it works with subpaths/reverse proxy and correct MIME.
+pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.mjs', import.meta.url).toString();
 
 type ResumePreviewProps = {
     file: string | File;
@@ -34,6 +35,7 @@ export function ResumePreview({file, pageNumber = 1}: ResumePreviewProps) {
                 file={file}
                 loading={<div>Loading PDF...</div>}
                 error={<div>Failed to load PDF.</div>}
+                onLoadError={(error) => console.error('PDF load error:', error)}
             >
                 <Page pageNumber={pageNumber} width={width} renderTextLayer={false} renderAnnotationLayer={false}/>
             </Document>
