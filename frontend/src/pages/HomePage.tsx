@@ -1,4 +1,5 @@
-import {m} from "framer-motion";
+import {m, type Variants} from "framer-motion";
+
 import {ActivityContainer} from "../components/ActivityContainer.tsx";
 import {CommandLineIcon} from "../components/icons/CommandLineIcon.tsx";
 import {WebsiteIcon} from "../components/icons/WebsiteIcon.tsx";
@@ -20,9 +21,9 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: {opacity: 0, y: 24},
-    visible: {opacity: 1, y: 0, transition: {duration: 0.6, ease: "easeOut"}},
+    visible: {opacity: 1, y: 0, transition: {duration: 0.6, ease: "easeOut" as const}},
 };
 
 export function HomePage() {

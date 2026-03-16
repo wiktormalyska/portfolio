@@ -1,14 +1,14 @@
-import {m} from "framer-motion";
+import {m, type Variants} from "framer-motion";
 import {GetListOfIconsFromTechnologyList} from "../components/TechnologyListDescryptor.tsx";
 import {usePortfolioProjects} from "../hooks/PortfilioProjectsHook.tsx";
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.12 } },
 };
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: {opacity: 0, y: 28},
-    visible: {opacity: 1, y: 0, transition: {duration: 0.55, ease: "easeOut"}},
+    visible: {opacity: 1, y: 0, transition: {duration: 0.55, ease: "easeOut" as const}},
 };
 
 function ProjectSkeleton() {
