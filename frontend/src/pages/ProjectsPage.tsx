@@ -13,6 +13,24 @@ const itemVariants: Variants = {
 
 const FALLBACK_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png";
 
+function normalizeExternalUrl(url: string | undefined) {
+    if (!url) {
+        return null;
+    }
+
+    const trimmed = url.trim();
+    if (!trimmed) {
+        return null;
+    }
+
+    try {
+        const parsed = new URL(trimmed);
+        return parsed.href;
+    } catch {
+        return null;
+    }
+}
+
 function resolveProjectImageUrl(imageUrl: string) {
     if (!imageUrl) {
         return FALLBACK_IMAGE_URL;
@@ -108,12 +126,14 @@ export function ProjectsPage() {
                 initial="hidden"
                 animate="visible"
                 className="flex flex-row max-xl:flex-col gap-6 w-full">
-                {projects!.map((project) => (
-                    <m.a
+                {projects!.map((project) => {
+                    const githubUrl = normalizeExternalUrl(project.repositoryUrl);
+                    const websiteUrl = normalizeExternalUrl(project.websiteUrl ?? project.homepageUrl ?? project.liveUrl);
+                    const hasAnyAction = Boolean(githubUrl || websiteUrl);
+
+                    return (
+                    <m.div
                         key={project.gitHubRepositoryId}
-                        href={project.repositoryUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
                         variants={itemVariants}
                         whileHover={{y: -4}}
                         className="glass-card w-[50%] max-2xl:w-full overflow-hidden group">
@@ -141,12 +161,33 @@ export function ProjectsPage() {
                             <span className="text-text/70 text-sm leading-relaxed text-justify max-lg:text-xs">
                                 {project.description}
                             </span>
-                            <div className="flex items-center gap-1 text-accent text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                                View on GitHub <span className="text-base">→</span>
-                            </div>
+                            {hasAnyAction && (
+                                <div className="flex flex-wrap items-center gap-3 pt-2 mt-auto">
+                                    {githubUrl && (
+                                        <a
+                                            href={githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 rounded-lg text-sm font-semibold border border-primary/40 text-primary hover:bg-primary/10 transition-colors"
+                                        >
+                                            GitHub
+                                        </a>
+                                    )}
+                                    {websiteUrl && (
+                                        <a
+                                            href={websiteUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 rounded-lg text-sm font-semibold border border-accent/40 text-accent hover:bg-accent/10 transition-colors"
+                                        >
+                                            Website
+                                        </a>
+                                    )}
+                                </div>
+                            )}
                         </div>
-                    </m.a>
-                ))}
+                    </m.div>
+                )})}
             </m.div>
         </m.div>
     )
