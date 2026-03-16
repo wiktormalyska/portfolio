@@ -30,7 +30,7 @@ export function AppWrapper({ children }: AppWrapperProps) {
                     background: 'radial-gradient(circle, rgba(96,141,204,0.6) 0%, transparent 70%)',
                 }}
             />
-            <div className="relative z-10 flex flex-col flex-1 sm:pr-5 sm:pl-5">
+            <div className="relative z-10 flex flex-col flex-1">
                 {children}
             </div>
         </div>
