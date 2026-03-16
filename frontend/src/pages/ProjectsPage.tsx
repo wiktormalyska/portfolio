@@ -11,6 +11,36 @@ const itemVariants: Variants = {
     visible: {opacity: 1, y: 0, transition: {duration: 0.55, ease: "easeOut" as const}},
 };
 
+const FALLBACK_IMAGE_URL = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png";
+
+function resolveProjectImageUrl(imageUrl: string) {
+    if (!imageUrl) {
+        return FALLBACK_IMAGE_URL;
+    }
+
+    try {
+        const url = new URL(imageUrl);
+        const trimmedPath = url.pathname.replace(/^\/+|\/+$/g, "");
+
+        // Convert GitHub blob/raw page URLs to direct raw file links for stable image loading.
+        const blobMatch = trimmedPath.match(/^([^/]+)\/([^/]+)\/blob\/([^/]+)\/(.+)$/);
+        if (url.hostname === "github.com" && blobMatch) {
+            const [, owner, repo, branch, filePath] = blobMatch;
+            return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${filePath}`;
+        }
+
+        const rawRefsMatch = trimmedPath.match(/^([^/]+)\/([^/]+)\/raw\/refs\/heads\/([^/]+)\/(.+)$/);
+        if (url.hostname === "github.com" && rawRefsMatch) {
+            const [, owner, repo, branch, filePath] = rawRefsMatch;
+            return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${filePath}`;
+        }
+
+        return imageUrl;
+    } catch {
+        return imageUrl;
+    }
+}
+
 function ProjectSkeleton() {
     return (
         <div className="glass-card w-[50%] max-2xl:w-full p-2 animate-pulse">
@@ -90,9 +120,15 @@ export function ProjectsPage() {
                         <div className="w-full aspect-video overflow-hidden">
                             <img
                                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                src={project.imageUrl}
+                                src={resolveProjectImageUrl(project.imageUrl)}
                                 alt={project.name}
-                                onError={(e) => (e.currentTarget.src = "https://upload.wikimedia.org/wikipedia/commons/0/0a/No-image-available.png")}
+                                onError={(e) => {
+                                    if (e.currentTarget.dataset.fallbackApplied === "1") {
+                                        return;
+                                    }
+                                    e.currentTarget.dataset.fallbackApplied = "1";
+                                    e.currentTarget.src = FALLBACK_IMAGE_URL;
+                                }}
                             />
                         </div>
                         <div className="p-6 flex flex-col gap-4 max-lg:p-4 max-lg:gap-3">
