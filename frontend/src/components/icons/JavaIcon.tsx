@@ -8,6 +8,8 @@ export const JavaIcon = ({size}: {size?: number}) => {
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 511.998 511.998"
             xmlSpace="preserve"
+            width={size}
+            height={size}
         >
             <g>
                 <path

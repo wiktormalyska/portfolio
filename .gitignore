@@ -8,3 +8,5 @@
 /.idea/shelf/Uncommitted_changes_before_Checkout_at_19_05_2025_23_15_[Changes]1/shelved.patch
 /.idea/shelf/Uncommitted_changes_before_Checkout_at_19_05_2025_23_15__Changes_.xml
 /.idea/workspace.xml
+/backend/.env
+/backend/node_modules/

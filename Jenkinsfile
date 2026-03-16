@@ -1,49 +1,57 @@
 pipeline {
     agent any
+
     options {
         skipDefaultCheckout()
+        timestamps()
     }
 
     environment {
         FRONTEND_IMAGE = 'portfolio-frontend:latest'
-        VITE_PORTFOLIO_PROJECTS_API_URL = 'https://portfolio-projects-api.wiktormalyska.ovh'
+        BACKEND_IMAGE = 'portfolio-backend:latest'
+        COMPOSE_FILE = 'docker-compose.yml'
     }
 
-    stages{
-        stage('Download portfolio repository') {
+    stages {
+        stage('Checkout') {
             steps {
                 git url: 'https://github.com/wiktormalyska/portfolio.git',
                     branch: 'master',
                     credentialsId: 'github-wiktormalyska'
             }
         }
-        stage('Build frontend') {
+
+        stage('Build Docker Images') {
             steps {
-                dir ('frontend') {
-                    sh 'docker build --no-cache --build-arg VITE_PORTFOLIO_PROJECTS_API_URL=$VITE_PORTFOLIO_PROJECTS_API_URL -t $FRONTEND_IMAGE .'
+                sh 'docker build -t $BACKEND_IMAGE -f backend/Dockerfile backend'
+                sh 'docker build -t $FRONTEND_IMAGE -f frontend/Dockerfile frontend'
+            }
+        }
+
+        stage('Prepare Backend Env') {
+            steps {
+                withCredentials([
+                    file(credentialsId: 'portfolio-backend-.env', variable: 'BACKEND_ENV_FILE')
+                ]) {
+                    sh 'cp "$BACKEND_ENV_FILE" backend/.env'
+                    sh 'chmod 600 backend/.env'
                 }
             }
         }
-        stage('Verify image') {
-            steps {
-                sh 'docker inspect $FRONTEND_IMAGE'
-            }
-        }
-        //Deploy
+
         stage('Deploy') {
             steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose up -d'
-                sh 'sleep 5 && docker-compose ps'
+                sh 'docker compose -f $COMPOSE_FILE down --remove-orphans || true'
+                sh 'docker compose -f $COMPOSE_FILE up -d'
             }
         }
     }
-    //Always show logs
+
     post {
         always {
-            script {
-                sh 'docker-compose logs'
-            }
+            sh 'rm -f backend/.env || true'
+            sh 'docker compose -f $COMPOSE_FILE ps || true'
+            sh 'docker compose -f $COMPOSE_FILE logs --tail=200 || true'
         }
     }
 }
