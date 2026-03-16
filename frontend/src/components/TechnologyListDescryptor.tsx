@@ -1,4 +1,13 @@
-import {siDocker, SimpleIcon, siReact, siSpringboot, siTailwindcss, siTypescript} from "simple-icons";
+import {
+    siDocker,
+    siJavascript, siMariadb,
+    SimpleIcon,
+    siReact,
+    siSpring,
+    siSpringboot, siStripe,
+    siTailwindcss,
+    siTypescript
+} from "simple-icons";
 import {ReactNode} from "react";
 import {JwtIcon} from "./icons/JwtIcon.tsx";
 import {JavaIcon} from "./icons/JavaIcon.tsx";
@@ -37,6 +46,22 @@ const TechnologiesRecord: Record<string, TechnologyType> = {
     Docker: {
         name: "Docker",
         icon: siDocker,
+    },
+    JavaScript: {
+        name: "JavaScript",
+        icon: siJavascript,
+    },
+    Spring: {
+        name: "Spring",
+        icon: siSpring
+    },
+    MariaDB: {
+        name: "MariaDB",
+        icon: siMariadb
+    },
+    Stripe: {
+        name: "Stripe",
+        icon: siStripe
     }
 }
 
