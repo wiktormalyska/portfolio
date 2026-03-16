@@ -11,6 +11,7 @@ import {
 import {ReactNode} from "react";
 import {JwtIcon} from "./icons/JwtIcon.tsx";
 import {JavaIcon} from "./icons/JavaIcon.tsx";
+import {MiUiIcon} from "./icons/MiUiIcon.tsx";
 
 export interface TechnologyType {
     name: string,
@@ -62,6 +63,10 @@ const TechnologiesRecord: Record<string, TechnologyType> = {
     Stripe: {
         name: "Stripe",
         icon: siStripe
+    },
+    JoyUI: {
+        name: "JoyUI",
+        icon: <MiUiIcon size={32}/>
     }
 }
 
