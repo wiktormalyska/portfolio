@@ -137,7 +137,7 @@ export function ProjectsPage() {
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
-                    className="flex flex-row max-xl:flex-col gap-6 w-full">
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                     {projects!.map((project) => {
                         const githubUrl = normalizeExternalUrl(project.repositoryUrl);
                         const websiteUrl = normalizeExternalUrl(project.websiteUrl ?? project.homepageUrl ?? project.liveUrl);
@@ -148,7 +148,7 @@ export function ProjectsPage() {
                         key={project.gitHubRepositoryId}
                         variants={itemVariants}
                         whileHover={{y: -4}}
-                        className="glass-card w-[50%] max-2xl:w-full overflow-hidden group">
+                        className="glass-card overflow-hidden group flex flex-col">
                         <div className="w-full aspect-video overflow-hidden">
                             <img
                                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
