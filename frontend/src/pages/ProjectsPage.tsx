@@ -1,6 +1,7 @@
 import {m, type Variants} from "framer-motion";
 import {GetListOfIconsFromTechnologyList} from "../components/TechnologyListDescryptor.tsx";
 import {usePortfolioProjects} from "../hooks/PortfilioProjectsHook.tsx";
+import { SEO } from "../components/Seo";
 
 const containerVariants: Variants = {
     hidden: {},
@@ -85,53 +86,64 @@ export function ProjectsPage() {
 
     if (isLoading) {
         return (
-            <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
-                className="w-full flex justify-center pt-12 max-lg:pt-4 flex-col items-center px-20 max-md:px-5 gap-10">
-                <span className="font-display bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl tracking-tight">
-                    PROJECTS
-                </span>
-                <div className="flex flex-row max-xl:flex-col gap-6 w-full">
-                    <ProjectSkeleton/><ProjectSkeleton/>
-                </div>
-            </m.div>
+            <>
+                <SEO title="Projekty | Wiktor Małyska" description="Lista projektów programistycznych, aplikacji i realizacji. Zobacz moje portfolio." />
+                <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
+                    className="w-full flex justify-center pt-12 max-lg:pt-4 flex-col items-center px-20 max-md:px-5 gap-10">
+                    <span className="font-display bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl tracking-tight">
+                        PROJECTS
+                    </span>
+                    <div className="flex flex-row max-xl:flex-col gap-6 w-full">
+                        <ProjectSkeleton/><ProjectSkeleton/>
+                    </div>
+                </m.div>
+            </>
         );
     }
 
     if (error) {
         return (
-            <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
-                className="w-full flex justify-center items-center pt-20">
-                <div className="text-xl text-red-400">Error loading projects.</div>
-            </m.div>
+            <>
+                <SEO title="Projekty | Wiktor Małyska" description="Lista projektów programistycznych, aplikacji i realizacji. Zobacz moje portfolio." />
+                <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
+                    className="w-full flex justify-center items-center pt-20">
+                    <div className="text-xl text-red-400">Error loading projects.</div>
+                </m.div>
+            </>
         );
     }
 
     if (!projects || projects.length === 0) {
         return (
-            <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
-                className="w-full flex justify-center items-center pt-20">
-                <div className="text-xl opacity-70">No projects found.</div>
-            </m.div>
+            <>
+                <SEO title="Projekty | Wiktor Małyska" description="Lista projektów programistycznych, aplikacji i realizacji. Zobacz moje portfolio." />
+                <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
+                    className="w-full flex justify-center items-center pt-20">
+                    <div className="text-xl opacity-70">No projects found.</div>
+                </m.div>
+            </>
         );
     }
 
     return (
-        <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
-            className="w-full flex justify-center pt-12 max-lg:pt-4 flex-col items-center px-20 max-md:px-5 pb-16">
-            <span className="font-display bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl tracking-tight mb-10 max-lg:mb-5">
-                PROJECTS
-            </span>
-            <m.div
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="flex flex-row max-xl:flex-col gap-6 w-full">
-                {projects!.map((project) => {
-                    const githubUrl = normalizeExternalUrl(project.repositoryUrl);
-                    const websiteUrl = normalizeExternalUrl(project.websiteUrl ?? project.homepageUrl ?? project.liveUrl);
-                    const hasAnyAction = Boolean(githubUrl || websiteUrl);
+        <>
+            <SEO title="Projekty | Wiktor Małyska" description="Lista projektów programistycznych, aplikacji i realizacji. Zobacz moje portfolio." />
+            <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.8}}
+                className="w-full flex justify-center pt-12 max-lg:pt-4 flex-col items-center px-20 max-md:px-5 pb-16">
+                <span className="font-display bg-gradient-to-r from-primary to-accent inline-block text-transparent bg-clip-text text-5xl font-extrabold max-lg:text-3xl tracking-tight mb-10 max-lg:mb-5">
+                    PROJECTS
+                </span>
+                <m.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="flex flex-row max-xl:flex-col gap-6 w-full">
+                    {projects!.map((project) => {
+                        const githubUrl = normalizeExternalUrl(project.repositoryUrl);
+                        const websiteUrl = normalizeExternalUrl(project.websiteUrl ?? project.homepageUrl ?? project.liveUrl);
+                        const hasAnyAction = Boolean(githubUrl || websiteUrl);
 
-                    return (
+                        return (
                     <m.div
                         key={project.gitHubRepositoryId}
                         variants={itemVariants}
@@ -190,5 +202,6 @@ export function ProjectsPage() {
                 )})}
             </m.div>
         </m.div>
+        </>
     )
 }
