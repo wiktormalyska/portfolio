@@ -9,7 +9,7 @@ export default defineConfig({
         react(),
         tailwindcss(),
         Sitemap({
-            hostname: 'https://wiktormalyska.ovh',
+            hostname: 'https://wiktormalyska.dev',
             dynamicRoutes: [
                 '/projects',
                 '/resume',
@@ -21,7 +21,7 @@ export default defineConfig({
     ],
     server: {
         port: 3000,
-        allowedHosts: ['wiktormalyska.ovh'],
+        allowedHosts: ['wiktormalyska.dev'],
         proxy: {
             '/api': {
                 target: 'http://localhost:3001',
