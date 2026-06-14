@@ -1,12 +1,16 @@
 import {
     siDocker,
+    siFastapi,
+    siGooglemaps,
     siJavascript, siMariadb,
+    siPython,
     SimpleIcon,
     siReact,
     siSpring,
     siSpringboot, siStripe,
     siTailwindcss,
-    siTypescript
+    siTypescript,
+    siVite
 } from "simple-icons";
 import {ReactNode} from "react";
 import {JwtIcon} from "./icons/JwtIcon.tsx";
@@ -67,6 +71,22 @@ const TechnologiesRecord: Record<string, TechnologyType> = {
     JoyUI: {
         name: "JoyUI",
         icon: <MiUiIcon size={32}/>
+    },
+    Vite: {
+        name: "Vite",
+        icon: siVite,
+    },
+    Python: {
+        name: "Python",
+        icon: siPython,
+    },
+    FastAPI: {
+        name: "FastAPI",
+        icon: siFastapi,
+    },
+    "Google Maps": {
+        name: "Google Maps",
+        icon: siGooglemaps,
     }
 }
 
