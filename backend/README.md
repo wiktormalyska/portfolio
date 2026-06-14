@@ -7,7 +7,7 @@ Minimalny backend proxy dla portfolio. Ukrywa klucz API po stronie serwera i wys
 ```env
 PORT=3001
 PORTFOLIOAPI_KEY=your_secret_key
-PORTFOLIOAPI_URL=https://api.portfolioapi.wiktormalyska.ovh
+PORTFOLIOAPI_URL=https://api.portfolioapi.wiktormalyska.dev
 API_USERNAME=wiktormalyska
 ```
 
