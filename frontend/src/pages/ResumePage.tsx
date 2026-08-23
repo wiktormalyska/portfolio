@@ -1,33 +1,34 @@
 import {CountryFlag} from "ts-react-emoji-flag"
-import {ReactNode} from "react";
 import {useState} from "react";
 import {AnimatePresence, m} from "framer-motion";
-import {ResumePreview} from '../components/ResumePreview';
 import { SEO } from "../components/Seo";
 
 interface languageOptions {
     code: string,
-    element: ReactNode,
     iconCode: string,
-    pdfFile: string
+    pdfFile: string,
+    publicUrl: string
 }
 
 const baseUrl = import.meta.env.BASE_URL || '/';
 const plPdf = `${baseUrl}Wiktor_Malyska_PL.pdf`;
 const engPdf = `${baseUrl}Wiktor_Malyska_ENG.pdf`;
 
+// Źródłem prawdy jest rxresu.me (Reactive Resume). PDF-y w /public są eksportem tych CV —
+// rxresu.me wysyła X-Frame-Options: DENY, więc publicznej strony nie da się wsadzić w iframe;
+// embedujemy eksport, a do wersji online prowadzi przycisk "rxresu.me".
 const languages: languageOptions[] = [
     {
         code: 'PL',
-        element: <ResumePreview file={plPdf} pageNumber={1}/> ,
         iconCode: 'PL',
-        pdfFile: plPdf
+        pdfFile: plPdf,
+        publicUrl: 'https://rxresu.me/wiktormalyska03/wiktor-malyska-pl'
     },
     {
         code: 'ENG',
-        element: <ResumePreview file={engPdf} pageNumber={1}/> ,
         iconCode: 'GB',
-        pdfFile: engPdf
+        pdfFile: engPdf,
+        publicUrl: 'https://rxresu.me/wiktormalyska03/wiktor-malyska'
     }
 ]
 
@@ -75,11 +76,25 @@ export function ResumePage() {
                             <span className="font-semibold text-sm max-sm:hidden">{language.code}</span>
                         </m.div>
                     ))}
+                    <m.a
+                        whileHover={{scale: 1.05}}
+                        whileTap={{scale: 0.95}}
+                        href={selectedLang.publicUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="glass-card px-4 py-2 max-md:px-3 flex flex-row gap-2 cursor-pointer text-text/70 hover:text-accent transition-all ml-3"
+                        title="Otwórz CV na rxresu.me"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-7.5 3l9-9m0 0h-5.25m5.25 0v5.25" />
+                        </svg>
+                        <span className="text-sm font-semibold max-sm:hidden">rxresu.me</span>
+                    </m.a>
                     <m.button
                         whileHover={{scale: 1.05}}
                         whileTap={{scale: 0.95}}
                         onClick={handleDownload}
-                        className="glass-card px-4 py-2 max-md:px-3 flex flex-row gap-2 cursor-pointer text-text/70 hover:text-accent transition-all ml-3"
+                        className="glass-card px-4 py-2 max-md:px-3 flex flex-row gap-2 cursor-pointer text-text/70 hover:text-accent transition-all"
                         title="Download Resume"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
@@ -101,12 +116,24 @@ export function ResumePage() {
                                 animate={{opacity: 1, y: 0}}
                                 exit={{opacity: 0, y: -10}}
                                 transition={{duration: 0.3}}
-                                className="w-full"
+                                className="w-full glass-card overflow-hidden"
                             >
-                                {selectedLang.element}
+                                <iframe
+                                    src={`${selectedLang.pdfFile}#view=FitH&navpanes=0`}
+                                    title={`CV Wiktor Małyska (${selectedLang.code})`}
+                                    className="w-full h-[85vh] max-md:h-[70vh] border-0 bg-white"
+                                />
                             </m.div>
                         </AnimatePresence>
                     </div>
+                    <a
+                        href={selectedLang.publicUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 text-sm text-text/60 hover:text-accent transition-all"
+                    >
+                        Wersja online: {selectedLang.publicUrl.replace('https://', '')}
+                    </a>
                 </m.div>
             </m.div>
         </>
