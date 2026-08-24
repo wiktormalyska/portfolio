@@ -15,7 +15,7 @@ const baseUrl = import.meta.env.BASE_URL || '/';
 // Data ostatniego eksportu CV z rxresu.me. Pliki w /public mają stałe nazwy, więc bez tego
 // przeglądarki (i Cloudflare) trzymają starą wersję — nginx podawał je jako `immutable`.
 // ⚠️ Podbij przy każdym nadpisaniu PDF-ów, inaczej nikt nie zobaczy zmian.
-const PDF_VERSION = '2026-08-24';
+const PDF_VERSION = '2026-08-24b';
 
 const plPdf = `${baseUrl}Wiktor_Malyska_PL.pdf?v=${PDF_VERSION}`;
 const engPdf = `${baseUrl}Wiktor_Malyska_ENG.pdf?v=${PDF_VERSION}`;
