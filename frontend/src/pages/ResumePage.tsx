@@ -11,8 +11,14 @@ interface languageOptions {
 }
 
 const baseUrl = import.meta.env.BASE_URL || '/';
-const plPdf = `${baseUrl}Wiktor_Malyska_PL.pdf`;
-const engPdf = `${baseUrl}Wiktor_Malyska_ENG.pdf`;
+
+// Data ostatniego eksportu CV z rxresu.me. Pliki w /public mają stałe nazwy, więc bez tego
+// przeglądarki (i Cloudflare) trzymają starą wersję — nginx podawał je jako `immutable`.
+// ⚠️ Podbij przy każdym nadpisaniu PDF-ów, inaczej nikt nie zobaczy zmian.
+const PDF_VERSION = '2026-08-24';
+
+const plPdf = `${baseUrl}Wiktor_Malyska_PL.pdf?v=${PDF_VERSION}`;
+const engPdf = `${baseUrl}Wiktor_Malyska_ENG.pdf?v=${PDF_VERSION}`;
 
 // Źródłem prawdy jest rxresu.me (Reactive Resume). PDF-y w /public są eksportem tych CV —
 // rxresu.me wysyła X-Frame-Options: DENY, więc publicznej strony nie da się wsadzić w iframe;
